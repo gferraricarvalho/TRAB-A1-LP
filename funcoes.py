@@ -38,7 +38,7 @@ def colunas_indesejadas(arquivo_txt, dados):
 
 
 def linhas_indesejadas(arquivo_txt, dados):
-    '''colunas_indesejadas remove as colunas indesejadasdo DataFrame fornecido, informadas utilizando 
+    '''linhas_indesejadas remove as linhas indesejadasdo DataFrame fornecido, informadas utilizando 
     o arquivo txt
 
     _extended_summary_
