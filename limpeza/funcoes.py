@@ -1,5 +1,7 @@
 import pandas as pd
 import doctest as dt
+from scipy import stats
+import numpy as np
 
 def colunas_indesejadas(arquivo_txt, dados):
     '''colunas_indesejadas remove as colunas indesejadasdo DataFrame fornecido, informadas utilizando 
@@ -138,6 +140,30 @@ def padroniza_tipos(dados):
     
     return dados
 
+
+def excluir_outliers(dataframe, coluna):
+    """
+    Função que exclui os outliers de uma coluna. Outliers são dados que se diferenciam muito do restante dos dados.
+    Nesta função o padrão utilizado para detectar os outliers foi o zscore. Foi considerado outlier valores absolutos de zscore acima de 10.
+
+    Parameters
+    ----------
+    dataframe : DataFrame
+        Nome do dataframe onde está a coluna que você deseja fazer a remoção dos outliers.
+    coluna : string
+        Nome da coluna desejada.
+
+    Returns
+    -------
+    df : DataFrame
+        O retorno é um Dataframe com a coluna que você selecionou sem os outliers.
+
+    """
+    z_score = np.abs(stats.zscore(dataframe[coluna]))
+    localizador = np.where(z_score>=10)
+    df = dataframe.drop (localizador[0], inplace=True)
+    
+    return df
 
 if __name__ == "__main__":
     dt.testmod()
