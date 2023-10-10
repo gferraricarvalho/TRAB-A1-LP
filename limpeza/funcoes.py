@@ -103,6 +103,23 @@ def remove_duplicadas(dados):
     return dados
 
 
+def remove_NaN(dados):
+    ''' Localiza colunas contendo excesso de valores vazios NaN's e as exclui do DataFrame.
+
+    Example:
+    >>> df = pd.DataFrame({'A': [1, np.nan, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
+    >>> remove_NaN(df)
+       C
+    0  7
+    1  8
+    2  9
+    
+    '''
+    percentagem_nan = 0.8
+    dados = dados.dropna(axis=1, thresh=dados.shape[0] * percentagem_nan)
+    
+    return dados
+
 
 if __name__ == "__main__":
     dt.testmod()
