@@ -87,9 +87,10 @@ def linhas_indesejadas(arquivo_txt, dados):
                 print(f"{linha} não encontrada!")
                 continue
         return dados
-    
+
+
 def remove_duplicadas(dados):
-    ''' Dropa linhas e colunas que estejam duplicadas no DataFrame.
+    ''' Dropa linhas que estejam duplicadas no DataFrame.
 
     Example:
     >>> df = pd.DataFrame({'A': [1, 2, 3, 3], 'B': [4, 5, 6, 6], 'C': [7, 8, 9, 9]})
@@ -117,6 +118,23 @@ def remove_NaN(dados):
     '''
     percentagem_nan = 0.8
     dados = dados.dropna(axis=1, thresh=dados.shape[0] * percentagem_nan)
+    
+    return dados
+
+
+def padroniza_tipos(dados):
+    ''' Localiza colunas com tipos mistos (mais de um tipo) - caracterizdas como tipo object - e padroniza, convertendo todos os valores nas colunas para string.
+    
+    Example:
+    >>> df = pd.DataFrame({'A': [1, 'oi', 3], 'B': [4, 'hello', 'world'], 'C': [7, 8, 9]})
+    >>> padroniza_tipos(df)
+        A      B  C
+    0   1      4  7
+    1  oi  hello  8
+    2   3  world  9
+    '''
+    colunas_object = dados.select_dtypes(include=['object']).columns
+    dados[colunas_object] = dados[colunas_object].astype(str)
     
     return dados
 
