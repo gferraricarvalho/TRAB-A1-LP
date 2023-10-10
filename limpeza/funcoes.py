@@ -15,12 +15,21 @@ def colunas_indesejadas(arquivo_txt, dados):
     :rtype: DataFrame
 
         Example:
+        1-
         >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
         >>> colunas_indesejadas('doc_coluna.txt', df)
            B  C
         0  4  7
         1  5  8
         2  6  9
+
+        2- passando um txt vazio
+        >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
+        >>> colunas_indesejadas('doc_null.txt', df)
+           A  B  C
+        0  1  4  7
+        1  2  5  8
+        2  3  6  9
 
 
     '''
@@ -51,12 +60,20 @@ def linhas_indesejadas(arquivo_txt, dados):
     :rtype: DataFrame
 
         Example:
+        1-
         >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
         >>> linhas_indesejadas('doc_linha.txt', df)
            A  B  C
         0  1  4  7
         2  3  6  9
 
+        2- passando um txt vazio
+        >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
+        >>> colunas_indesejadas('doc_null.txt', df)
+           A  B  C
+        0  1  4  7
+        1  2  5  8
+        2  3  6  9
 
     '''
     with open(arquivo_txt, 'r') as arquivo:
