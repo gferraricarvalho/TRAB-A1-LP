@@ -88,7 +88,17 @@ def linhas_indesejadas(arquivo_txt, dados):
                 continue
         return dados
     
-def linhas_duplicadas(dados):
+def remove_duplicadas(dados):
+    ''' Dropa linhas e colunas que estejam duplicadas no DataFrame.
+
+    Example:
+    >>> df = pd.DataFrame({'A': [1, 2, 3, 3], 'B': [4, 5, 6, 6], 'C': [7, 8, 9, 9]})
+    >>> remove_duplicadas(df)
+       A  B  C
+    0  1  4  7
+    1  2  5  8
+    2  3  6  9
+    '''
     dados = dados.drop_duplicates()
     return dados
 
