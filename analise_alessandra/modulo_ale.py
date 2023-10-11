@@ -1,8 +1,13 @@
-import ler_arquivo as la
-from limpeza import funcoes as fl
+import sys
+import os
 import matplotlib.pyplot as plt
 
-df_0 = la.ler_arquivo_csv("microdados_ed_basica_2021.csv")
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # possibilita ler arquivos/módulos um nível acima
+import ler_arquivo as la
+
+caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', "microdados_ed_basica_2021.csv") # encontra a base de dados
+
+df_0 = la.ler_arquivo_csv(caminho_arquivo)
 
 df = df_0[["TP_DEPENDENCIA", "QT_MAT_BAS_ND", "QT_MAT_BAS_BRANCA", "QT_MAT_BAS_PRETA", "QT_MAT_BAS_PARDA", "QT_MAT_BAS_AMARELA", "QT_MAT_BAS_INDIGENA"]]
 
