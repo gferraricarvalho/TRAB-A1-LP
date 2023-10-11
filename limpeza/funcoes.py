@@ -165,6 +165,26 @@ def excluir_outliers(dataframe, coluna):
     
     return df
 
+def excluir_colunas_de_zeros(dataframe):
+    """
+    Função que exclui colunas nulas, só com 0.
+
+    Parameters
+    ----------
+    dataframe : DataFrame
+        Dataframe que possui colunas com 0.
+
+    Returns
+    -------
+    df : DataFrame
+        Retorna o dataframe sem as colunas nulas.
+
+    """
+    colunas_de_zeros = dataframe.columns[dataframe.apply(lambda x: (x == 0).all())]
+    df = dataframe.drop(columns=colunas_de_zeros, inplace=True)
+    return df
+
+
 if __name__ == "__main__":
     dt.testmod()
     dt.testmod(verbose=True)
