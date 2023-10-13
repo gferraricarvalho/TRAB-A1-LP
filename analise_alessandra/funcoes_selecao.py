@@ -1,5 +1,6 @@
 import doctest as dt
 import pandas as pd
+
 def selecionar_colunas(dataframe, *nomes_colunas):
     """
     A função selecionar colunas é utilizada para selecionar colunas específicas de um Dataframe.
@@ -55,6 +56,7 @@ def trocar_valor (dataframe, coluna, valores):
     1   Guilherme  Vinte e um
 
     """
+    #mapeia os valores indicados no dicionario e faz a troca atribuindo os novos valores no mesmo DataFrame
     dataframe[coluna] = dataframe[coluna].map(valores)
     return dataframe
 
@@ -86,6 +88,7 @@ def somar_valores_agrupado (dataframe, coluna, coluna_agrupamento):
     Name: Itens comprados, dtype: int64
 
     """
+    #primeiro faz o agrupamento, para depois selecionara a coluna e fazer a soma
     df = dataframe.groupby(coluna_agrupamento)[coluna].sum()
     return df
 
