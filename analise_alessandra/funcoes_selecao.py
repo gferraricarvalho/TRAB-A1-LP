@@ -55,8 +55,8 @@ def somar_valores_agrupado (dataframe, coluna, coluna_agrupamento):
 
     Returns
     -------
-    df : Dataframe
-        Dataframe com a soma da coluna.
+    df : Series
+        Serie com a soma da coluna, onde o índice é o agrupamento.
 
     """
     df = dataframe.groupby(coluna_agrupamento)[coluna].sum()
