@@ -1,90 +1,53 @@
 import sys
 import os
+import matplotlib.pyplot as plt
+import pandas as pd
 
 diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(diretorio_raiz)
 
 import ler_arquivo as la
 from limpeza import funcoes as fc
-import pandas as pd
-import matplotlib.pyplot as plt
 
- # encontra a base de dados
-caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', "microdados_ed_basica_2021.csv")
+def localizacao(nome_arquivo:str) -> pd.DataFrame:
 
-# Lendo arquivo
-dados = la.ler_arquivo_csv(caminho_arquivo)
+     # encontra a base de dados
+    caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..',nome_arquivo)
+    dados = la.ler_arquivo_csv(caminho_arquivo)
+    dados = pd.DataFrame(dados)
+    return dados
 
-#escolhendo as colunas que serão utilizadas
-dados_utilizados = dados[['SG_UF', 'TP_CATEGORIA_ESCOLA_PRIVADA', 'IN_BIBLIOTECA',
-   'IN_DORMITORIO_ALUNO', 'IN_DORMITORIO_PROFESSOR', 'IN_QUADRA_ESPORTES'
-   ]]
+def organiza(parametro_ordem: str,dados: pd.DataFrame, colunas_usadas:str) -> pd.DataFrame:
 
-#organizando por região
-dados_regiao = dados.groupby('SG_UF').sum().reset_index()
-regiao = dados_regiao['SG_UF']
+     #escolhendo as colunas que serão utilizadas
+    dados_utilizados = dados[colunas_usadas]
 
-
-while True:
-    print("""
-        1 = Quantidade de escolas privadas por região. \n
-        2 = Quantidade de escolas com bibliotecas por região.\n
-        3 = Quantidade de escolas com dormitórios para alunos, por região.\n
-        4 = Quantidade de escolas com dormitórios para professores, por região.\n
-        5 = Quantidade de escolas com quadras esportivas, por região.\n
-""")
-    escolha = input("qual doas graficos? \t")
-    if escolha == '1':
-        # Quantidade de escolas privadas por região
-        quantidade = dados_regiao['TP_CATEGORIA_ESCOLA_PRIVADA']
-        plt.bar(regiao,quantidade)
-        plt.show()
-        plt.xticks(rotation=90)
-        
-    elif escolha == '2':
-        # Quantidade de escolas com bibliotecas por região
-        quantidade = dados_regiao['IN_BIBLIOTECA']
-        plt.bar(regiao,quantidade)
-        plt.show()
-        plt.xticks(rotation=90)
-
-    elif escolha == '3':
-        # Quantidade de escolas com dormitórios para alunos, por região
-        quantidade = dados_regiao['IN_DORMITORIO_ALUNO']
-        plt.bar(regiao,quantidade)
-        plt.show()
-        plt.xticks(rotation=90)
-
-    elif escolha == '4':
-        # Quantidade de escolas com dormitórios para professores, por região
-        quantidade = dados_regiao['IN_DORMITORIO_PROFESSOR']
-        plt.bar(regiao,quantidade)
-        plt.show()
-        plt.xticks(rotation=90)
-        
-    elif escolha == '5':
-        # Quantidade de escolas com quadras esportivas, por região
-        quantidade = dados_regiao['IN_QUADRA_ESPORTES']
-        plt.bar(regiao,quantidade)
-        plt.show()
-        plt.xticks(rotation=90)
-        
-    else:
-        break
+    #organizando por Sigla da Unidade da Federação
+    dados_uf = dados_utilizados.groupby(parametro_ordem).sum().reset_index()
+    
+    return dados_uf
 
 
+def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str, eixo_x: pd.DataFrame, titulo: str,nome_imag:str):
 
+    quantidade = dados_uf[coluna_desejada]
+    fig, ax = plt.subplots()
+    quantidade.plot(kind='bar', ax=ax)
+    ax.set_ylabel(eixo_y)
+    ax.set_title(titulo)
+    ax.set_xticks(range(len(eixo_x)))
+    ax.set_xticklabels(eixo_x, rotation=90)
+    ax.axhline(y=quantidade.mean(), color='black', linestyle='solid', label='Média')
+    plt.show()
+    
+    # Salva o gráfico como uma imagem
+    if not os.path.exists('imagens'):
+        os.makedirs('imagens')
+    fig.savefig(f"imagens/{nome_imag}.png")
 
-
-
-
-
-
-
-
-
-
-
-
+def calcular_estatisticas(dados):
+    # Calcule estatísticas descritivas
+    estatisticas = dados.describe()
+    return estatisticas
 
 
