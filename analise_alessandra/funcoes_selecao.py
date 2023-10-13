@@ -26,7 +26,10 @@ def selecionar_colunas(dataframe, *nomes_colunas):
     1   Guilherme
 
     """
-    df = dataframe[[*nomes_colunas]]
+    try:
+        df = dataframe[[*nomes_colunas]]
+    except:
+        print("Verifique se o nome do DataFrame ou da coluna está escrito da forma correta.") 
     return df
 
 def trocar_valor (dataframe, coluna, valores):
@@ -57,7 +60,10 @@ def trocar_valor (dataframe, coluna, valores):
 
     """
     #mapeia os valores indicados no dicionario e faz a troca atribuindo os novos valores no mesmo DataFrame
-    dataframe[coluna] = dataframe[coluna].map(valores)
+    try:
+        dataframe[coluna] = dataframe[coluna].map(valores)
+    except: 
+        print("Verifique se os nomes estão corretos e o dicionário está abrangendo todas as possibilidades.")
     return dataframe
 
 def somar_valores_agrupado (dataframe, coluna, coluna_agrupamento):
@@ -89,7 +95,10 @@ def somar_valores_agrupado (dataframe, coluna, coluna_agrupamento):
 
     """
     #primeiro faz o agrupamento, para depois selecionara a coluna e fazer a soma
-    df = dataframe.groupby(coluna_agrupamento)[coluna].sum()
+    try:
+        df = dataframe.groupby(coluna_agrupamento)[coluna].sum()
+    except:
+        print("Verifique se os nomes estão corretos.")
     return df
 
 if __name__ == "__main__":

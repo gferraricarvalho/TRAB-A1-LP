@@ -22,7 +22,10 @@ def ler_arquivo_csv (nome_arquivo):
     0     a    1
 
     """
-    df = pd.read_csv(nome_arquivo, sep = ";", encoding = "latin-1", on_bad_lines="skip", low_memory=False)
+    try:
+        df = pd.read_csv(nome_arquivo, sep = ";", encoding = "latin-1", on_bad_lines="skip", low_memory=False)
+    except FileNotFoundError as error: 
+        print("Veja se o nome do arquivo ou nome pasta está correto")
     
     return df
 
