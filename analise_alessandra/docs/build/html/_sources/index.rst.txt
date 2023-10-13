@@ -5,6 +5,12 @@
 
 Welcome to documentacao Alessandra's documentation!
 ===================================================
+.. automodule:: analise_ale
+   :members:
+.. automodule:: funcoes_grafico
+   :members:
+.. automodule:: funcoes_selecao
+   :members:
 
 .. toctree::
    :maxdepth: 2
