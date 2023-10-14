@@ -5,3 +5,4 @@ ler\_arquivo module
    :members:
    :undoc-members:
    :show-inheritance:
+ 

@@ -9,7 +9,7 @@ Welcome to relação região e escolas's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+ 
 
 
 Indices and tables
