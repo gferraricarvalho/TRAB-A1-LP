@@ -3,6 +3,8 @@ import pandas as pd
 
 def main():
     analise = pd.DataFrame(an.analise_completa())
+
+    return analise
     
  
 if __name__ == "__main__":
