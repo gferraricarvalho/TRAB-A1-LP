@@ -1,7 +1,7 @@
 import pandas as pd
 import doctest as dt
 
-def ler_arquivo_csv(nome_arquivo):
+def ler_arquivo_csv(nome_arquivo) -> pd.DataFrame:
     """
     Função para ler arquivos do tipo CSV e transformar em DataFrame Pandas.
 
