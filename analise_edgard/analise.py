@@ -3,12 +3,12 @@ import visualizacao as vz
 def analise_completa():
     """
     Essa função é chamada pela main.py e após isso chama todas as funções disponíveis no arquivo visualizacao.py
-    automatizando o processo da analise de dados, essa função não recebe nenhumparâmetro por conta que é feita 
-    específicamente para essa analise
+    automatizando o processo da analise de dados, essa função não recebe nenhum parâmetro por conta que é feita 
+    específicamente para essa análise.
 
     Return
     ------
-    estatisticas -> dict com todas as estatísticas dos estados 'SP','MG' e 'PA'
+    estatisticas -> dict com todas as estatísticas dos estados 'SP','MG' e 'PA'.
     """
 
     #localizando a base de dados
