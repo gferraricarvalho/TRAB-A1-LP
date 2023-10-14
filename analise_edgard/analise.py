@@ -30,7 +30,7 @@ def analise_completa():
 
     # Criar um dicionário para armazenar as estatísticas de diferentes estados
     estatisticas = {}
-
+ 
     # Calcular as estatísticas para São Paulo e armazená-las no dicionário
     estatisticas['SP'] = {
         'estatisticas': vz.calcular_estatisticas(df_sp),
