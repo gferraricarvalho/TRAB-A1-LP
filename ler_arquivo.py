@@ -1,7 +1,7 @@
 import pandas as pd
 import doctest as dt
 
-def ler_arquivo_csv (nome_arquivo):
+def ler_arquivo_csv(nome_arquivo):
     """
     Função para ler arquivos do tipo CSV e transformar em DataFrame Pandas.
 
@@ -24,11 +24,10 @@ def ler_arquivo_csv (nome_arquivo):
     """
     try:
         df = pd.read_csv(nome_arquivo, sep = ";", encoding = "latin-1", on_bad_lines="skip", low_memory=False)
-    except FileNotFoundError as error: 
-        print("Veja se o nome do arquivo ou nome pasta está correto")
-    
-    return df
+    except FileNotFoundError: 
+        print(f'Arquivo "{nome_arquivo}" não Encontrado! Veja se não errou o nome dele!')
+    else:
+        return df
 
 if __name__ == "__main__":
-    dt.testmod()
     dt.testmod(verbose=True)
