@@ -1,9 +1,9 @@
 import visualizacao as vz
 
 def analise_completa():
-    
+
     #localizando a base de dados
-    colunas = ['SG_UF','IN_BANHEIRO_PNE', 'IN_BIBLIOTECA',
+    colunas = ['SG_UF','NO_MUNICIPIO','IN_BANHEIRO_PNE', 'IN_BIBLIOTECA',
         'IN_DORMITORIO_ALUNO', 'IN_DORMITORIO_PROFESSOR', 'IN_QUADRA_ESPORTES'
         ]
     df = vz.localizacao('microdados_ed_basica_2021.csv')
@@ -24,9 +24,9 @@ def analise_completa():
     df_pa = df.loc[df['SG_UF'] == 'PA'] #Destaque em dormitorios para professores
 
     #organizando cada um deles por municipio
-    df_sp = vz.organiza('NO_MUNICIPIO',df_sp,['NO_MUNICIPIO','IN_BANHEIRO_PNE','IN_QUADRA_ESPORTES'])
-    df_mg = vz.organiza('NO_MUNICIPIO',df_mg,['NO_MUNICIPIO','IN_BIBLIOTECA','IN_DORMITORIO_ALUNO'])
-    df_pa = vz.organiza('NO_MUNICIPIO',df_pa,['NO_MUNICIPIO','IN_DORMITORIO_PROFESSOR'])
+    df_sp = vz.organiza('NO_MUNICIPIO',df_sp,colunas)
+    df_mg = vz.organiza('NO_MUNICIPIO',df_mg,colunas)
+    df_pa = vz.organiza('NO_MUNICIPIO',df_pa,colunas)
 
     # Criar um dicionário para armazenar as estatísticas de diferentes estados
     estatisticas = {}

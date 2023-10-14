@@ -1,8 +1,9 @@
 import analise as an
+import pandas as pd
 
 def main():
-    an.analise_completa()
- 
+    analise = pd.DataFrame(an.analise_completa())
+    
 
 if __name__ == "__main__":
     main()
