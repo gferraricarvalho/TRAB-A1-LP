@@ -155,7 +155,7 @@ def excluir_outliers(dataframe: pd.DataFrame, coluna: str) -> pd.DataFrame:
     """
     z_score = np.abs(stats.zscore(dataframe[coluna]))
     localizador = np.where(z_score>=10)
-    df = dataframe.drop(localizador[0])
+    df = dataframe.drop(dataframe.index[localizador[0]])
     
     return df
 
