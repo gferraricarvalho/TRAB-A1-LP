@@ -2,8 +2,9 @@ import pandas as pd
 import doctest as dt
 from scipy import stats
 import numpy as np
+import os
 
-def colunas_indesejadas(arquivo_txt, dados):
+def colunas_indesejadas(arquivo_txt, dados: pd.DataFrame) -> pd.DataFrame:
     '''colunas_indesejadas remove as colunas indesejadasdo DataFrame fornecido, informadas utilizando 
     o arquivo txt
 
@@ -19,7 +20,7 @@ def colunas_indesejadas(arquivo_txt, dados):
         Example:
         1-
         >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
-        >>> colunas_indesejadas('doc_coluna.txt', df)
+        >>> colunas_indesejadas(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'doc_coluna.txt'), df)
            B  C
         0  4  7
         1  5  8
@@ -27,7 +28,7 @@ def colunas_indesejadas(arquivo_txt, dados):
 
         2- passando um txt vazio
         >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
-        >>> colunas_indesejadas('doc_null.txt', df)
+        >>> colunas_indesejadas(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'doc_null.txt'), df)
            A  B  C
         0  1  4  7
         1  2  5  8
@@ -48,7 +49,7 @@ def colunas_indesejadas(arquivo_txt, dados):
         return dados
 
 
-def linhas_indesejadas(arquivo_txt, dados):
+def linhas_indesejadas(arquivo_txt, dados: pd.DataFrame) -> pd.DataFrame:
     '''linhas_indesejadas remove as linhas indesejadasdo DataFrame fornecido, informadas utilizando 
     o arquivo txt
 
@@ -64,14 +65,14 @@ def linhas_indesejadas(arquivo_txt, dados):
         Example:
         1-
         >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
-        >>> linhas_indesejadas('doc_linha.txt', df)
+        >>> linhas_indesejadas(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'doc_linha.txt'), df)
            A  B  C
         0  1  4  7
         2  3  6  9
 
         2- passando um txt vazio
         >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
-        >>> colunas_indesejadas('doc_null.txt', df)
+        >>> colunas_indesejadas(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'doc_null.txt'), df)
            A  B  C
         0  1  4  7
         1  2  5  8
@@ -91,8 +92,13 @@ def linhas_indesejadas(arquivo_txt, dados):
         return dados
 
 
-def remove_duplicadas(dados):
+def remove_duplicadas(dados: pd.DataFrame) -> pd.DataFrame:
     ''' Dropa linhas que estejam duplicadas no DataFrame.
+
+    Parameters
+    ----------
+    dados: pd.DataFrame
+        dataframe que se deseja remover as linhas duplicadas.
 
     Example:
     >>> df = pd.DataFrame({'A': [1, 2, 3, 3], 'B': [4, 5, 6, 6], 'C': [7, 8, 9, 9]})
@@ -106,8 +112,13 @@ def remove_duplicadas(dados):
     return dados
 
 
-def remove_NaN(dados):
+def remove_NaN(dados: pd.DataFrame) -> pd.DataFrame:
     ''' Localiza colunas contendo excesso de valores vazios NaN's e as exclui do DataFrame.
+
+    Parameters
+    ----------
+    dados: pd.DataFrame
+        dataframe que se deseja remover as colunas com excesso de NaNs.
 
     Example:
     >>> df = pd.DataFrame({'A': [1, np.nan, np.nan], 'B': [4, np.nan, 6], 'C': [7, 8, 9]})
@@ -124,24 +135,7 @@ def remove_NaN(dados):
     return dados
 
 
-def padroniza_tipos(dados):
-    ''' Localiza colunas com tipos mistos (mais de um tipo) - caracterizdas como tipo object - e padroniza, convertendo todos os valores nas colunas para string.
-    
-    Example:
-    >>> df = pd.DataFrame({'A': [1, 'oi', 3], 'B': [4, 'hello', 'world'], 'C': [7, 8, 9]})
-    >>> padroniza_tipos(df)
-        A      B  C
-    0   1      4  7
-    1  oi  hello  8
-    2   3  world  9
-    '''
-    colunas_object = dados.select_dtypes(include=['object']).columns
-    dados[colunas_object] = dados[colunas_object].astype(str)
-    
-    return dados
-
-
-def excluir_outliers(dataframe, coluna):
+def excluir_outliers(dataframe: pd.DataFrame, coluna: str) -> pd.DataFrame:
     """
     Função que exclui os outliers de uma coluna. Outliers são dados que se diferenciam muito do restante dos dados.
     Nesta função o padrão utilizado para detectar os outliers foi o zscore. Foi considerado outlier valores absolutos de zscore acima de 10.
@@ -161,11 +155,11 @@ def excluir_outliers(dataframe, coluna):
     """
     z_score = np.abs(stats.zscore(dataframe[coluna]))
     localizador = np.where(z_score>=10)
-    df = dataframe.drop (localizador[0], inplace=True)
+    df = dataframe.drop(localizador[0])
     
     return df
 
-def excluir_colunas_de_zeros(dataframe):
+def excluir_colunas_de_zeros(dataframe: pd.DataFrame) -> pd.DataFrame:
     """
     Função que exclui colunas nulas, só com 0.
 
@@ -179,9 +173,17 @@ def excluir_colunas_de_zeros(dataframe):
     df : DataFrame
         Retorna o dataframe sem as colunas nulas.
 
+    Example:
+    >>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 0], 'C': [0, 0, 0]})
+    >>> excluir_colunas_de_zeros(df)
+       A  B
+    0  1  4
+    1  2  5
+    2  3  0
+    
     """
-    colunas_de_zeros = dataframe.columns[dataframe.apply(lambda x: (x == 0).all())]
-    df = dataframe.drop(columns=colunas_de_zeros, inplace=True)
+    colunas_de_zeros = dataframe.columns[dataframe.apply(lambda x: (x == 0).all())].to_list()
+    df = dataframe.drop(columns=colunas_de_zeros)
     return df
 
 
