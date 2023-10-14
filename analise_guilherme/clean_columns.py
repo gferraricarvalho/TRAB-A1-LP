@@ -1,3 +1,6 @@
+import doctest as dt
+import pandas as pd
+
 def filter_columns(dataframe, colunas):
     """
     A função filtra as colunas de um dataframe, 
@@ -15,6 +18,13 @@ def filter_columns(dataframe, colunas):
     df_filtrado : dataframe
         Dataframe filtrado com as colunas selecionadas.
 
+    Exemplo
+    -------
+    >>> df = pd.DataFrame({"Numero": [13,22], "Nome": ["Lula", "Bolsonaro"]})
+    >>> filter_columns(df, ["Numero"])
+       Numero
+    0      13
+    1      22
     """
     df_filtrado = dataframe[colunas]
     return df_filtrado
@@ -33,6 +43,17 @@ def sum_columns(dataframe):
     df_somado : dataframe
         Dataframe que exibe a soma das colunas.
 
+    Exemplo
+    -------
+    >>> df = pd.DataFrame({"Aluno": ["Gui", "Ale"], "Faltas": [7,1]})
+    >>> sum_columns(df)
+    Aluno     GuiAle
+    Faltas         8
+    dtype: object
     """
     df_somado = dataframe.sum()
     return df_somado
+
+if __name__ == "__main__":
+    dt.testmod()
+    dt.testmod(verbose=True)
