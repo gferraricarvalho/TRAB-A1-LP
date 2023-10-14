@@ -3,14 +3,13 @@ import os
 import matplotlib.pyplot as plt
 import pandas as pd
 
-diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 sys.path.append(diretorio_raiz)
 
 import ler_arquivo as la
-from limpeza import funcoes as fc
 
 def localizacao(nome_arquivo:str) -> pd.DataFrame:
-
+  
      # encontra a base de dados
     caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..',nome_arquivo)
     dados = la.ler_arquivo_csv(caminho_arquivo)
@@ -22,14 +21,17 @@ def organiza(parametro_ordem: str,dados: pd.DataFrame, colunas_usadas:str) -> pd
      #escolhendo as colunas que serão utilizadas
     dados_utilizados = dados[colunas_usadas]
 
-    #organizando por Sigla da Unidade da Federação
+    #organizando de acordo com o parametro fornecido pelo usuario
     dados_uf = dados_utilizados.groupby(parametro_ordem).sum().reset_index()
     
     return dados_uf
 
 
-def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str, eixo_x: pd.DataFrame, titulo: str,nome_imag:str):
-
+def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str, eixo_x: pd.DataFrame,
+                     titulo: str,nome_imag:str):
+    '''Essa função recebe um dataframe com os dados escolhidaos pelo usuario, 
+    mais o titulo e as colunas desejadase com isso ele plota o o grafico em questão
+    '''
     quantidade = dados_uf[coluna_desejada]
     fig, ax = plt.subplots()
     quantidade.plot(kind='bar', ax=ax)
@@ -46,8 +48,14 @@ def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str,
     fig.savefig(f"imagens/{nome_imag}.png")
 
 def calcular_estatisticas(dados):
+
     # Calcule estatísticas descritivas
     estatisticas = dados.describe()
     return estatisticas
+
+def encontrar_max(df, coluna):
+    max_valor = df[coluna].max()
+    municipio_max = df[df[coluna] == max_valor]['NO_MUNICIPIO'].values[0]
+    return municipio_max
 
 
