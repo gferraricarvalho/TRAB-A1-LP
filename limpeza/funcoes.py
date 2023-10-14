@@ -4,7 +4,7 @@ from scipy import stats
 import numpy as np
 import os
 
-def colunas_indesejadas(arquivo_txt, dados: pd.DataFrame) -> pd.DataFrame:
+def colunas_indesejadas(arquivo_txt: str, dados: pd.DataFrame) -> pd.DataFrame:
     '''colunas_indesejadas remove as colunas indesejadasdo DataFrame fornecido, informadas utilizando 
     o arquivo txt
 
@@ -49,7 +49,7 @@ def colunas_indesejadas(arquivo_txt, dados: pd.DataFrame) -> pd.DataFrame:
         return dados
 
 
-def linhas_indesejadas(arquivo_txt, dados: pd.DataFrame) -> pd.DataFrame:
+def linhas_indesejadas(arquivo_txt: str, dados: pd.DataFrame) -> pd.DataFrame:
     '''linhas_indesejadas remove as linhas indesejadasdo DataFrame fornecido, informadas utilizando 
     o arquivo txt
 
@@ -188,6 +188,5 @@ def excluir_colunas_de_zeros(dataframe: pd.DataFrame) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    dt.testmod()
     dt.testmod(verbose=True)
 
