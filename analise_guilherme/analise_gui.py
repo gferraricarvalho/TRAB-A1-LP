@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import ler_arquivo as la
 
 #Encontra a base de dados
-caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', "microdados_ed_basica_2021.csv")
+caminho_arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', "dados_limpos.csv")
 
 df_original = la.ler_arquivo_csv(caminho_arquivo)
 
