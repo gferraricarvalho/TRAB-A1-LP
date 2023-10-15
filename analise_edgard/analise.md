@@ -30,7 +30,7 @@ Nestes dados, podemos observar que o estado de São Paulo se destaca como o líd
 Destacando-se mais uma vez, a cidade de São Paulo surge como líder no número de quadras esportivas, com um total impressionante de 3.309 unidades.
 
 ## 5- Dormitórios para professores
-
+ 
 ![Texto Alternativo](imagens/imagem_4.png)
 
 Nestes dados, é evidente que o estado do Pará se destaca em relação à quantidade de dormitórios para professores em escolas. O Pará registra uma média de cerca de 2,42 dormitórios por município, com um desvio padrão de 6,26. No entanto, vale ressaltar que a presença de dormitórios para professores não é comum em muitos municípios.
