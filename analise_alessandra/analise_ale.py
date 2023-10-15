@@ -20,11 +20,11 @@ df = fs.trocar_valor(df, "TP_DEPENDENCIA", {1:"Federal", 2 : "Municipal", 3: "Es
 
 #contando o número de matriculas por raça
 nao_declarada = (fs.somar_valores_agrupado(df, "QT_MAT_BAS_ND", "TP_DEPENDENCIA"))/1000000
-branca = (fs.somar_valores_agrupado(df, "QT_MAT_BAS_BRANCA", "TP_DEPENDENCIA"))/1000000
-preta = (fs.somar_valores_agrupado(df, "QT_MAT_BAS_PRETA", "TP_DEPENDENCIA"))/1000000
-parda = (fs.somar_valores_agrupado(df,"QT_MAT_BAS_PARDA", "TP_DEPENDENCIA"))/1000000
-amarela = (fs.somar_valores_agrupado(df, "QT_MAT_BAS_AMARELA", "TP_DEPENDENCIA"))/1000000
-indigena = (fs.somar_valores_agrupado(df, "QT_MAT_BAS_INDIGENA", "TP_DEPENDENCIA"))/1000000
+branca = list((fs.somar_valores_agrupado(df, "QT_MAT_BAS_BRANCA", "TP_DEPENDENCIA"))/1000000)
+preta = list((fs.somar_valores_agrupado(df, "QT_MAT_BAS_PRETA", "TP_DEPENDENCIA"))/1000000)
+parda = list((fs.somar_valores_agrupado(df,"QT_MAT_BAS_PARDA", "TP_DEPENDENCIA"))/1000000)
+amarela = list((fs.somar_valores_agrupado(df, "QT_MAT_BAS_AMARELA", "TP_DEPENDENCIA"))/1000000)
+indigena = list((fs.somar_valores_agrupado(df, "QT_MAT_BAS_INDIGENA", "TP_DEPENDENCIA"))/1000000)
 
 #plotando o gráfico
 grafico = fg.grafico_de_linha_6_var(nao_declarada, branca, preta, parda, amarela, indigena, "Não declarada", "Branca", 
