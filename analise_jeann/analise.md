@@ -58,7 +58,7 @@ A fim de analisar a ausência desses recursos para entender se, de fato, as regi
 
 ![](imagens/32.png)
 
-[Escrever análise de dados inexistentes]
+Nesse caso, a Região Sudeste perde a expressividade, exceto no tratamento de lixo, onde vemos que a quantidade de escolas que não tem tratamento do lixo é relativamente alta (principalmente em São Paulo, mas também em Minas Gerais e Rio de Janeiro). A Região Nordeste tem também diversas escolas sem abastecimento de água, sem esgoto e sem tratamento de lixo, muito frequentes na Bahia, Maranhão e Paraíba. A Região Norte também demonstra ter muitas escolas sem água, energia e esgoto (principalmente no Amazonas e no Acre), que deve ocorrer por diversos fatores, que podem ser geograficos, economicos ou mesmo historico-sociais. Por fim, as regiões Centro-Oeste e Sul se mantém em valores baixos, o que indica uma baixa quantidade de escolas sem algum destes indicadores, caracterizando um grau de desenvolvimento, já que em proporção há bem mais escolas com esses indicadore do que sem.
 
 Analisando agora meios alternativos de abastecimento de água e energia nas escolas, além de tipos diferentes de esgoto e tratamento de lixo nas escolas, temos as seguintes situações:
 
@@ -70,12 +70,31 @@ Analisando agora meios alternativos de abastecimento de água e energia nas esco
 
 ![](imagens/42.png)
 
+[Colocar texto aqui rsrs]
+
+Analisando os tipos de tratamento de lixo que ocorrem nas escolas, temos as seguintes situações:
+
+- Por regiões:
 
 ![](imagens/51.png)
+
+- Por estados:
+
 ![](imagens/52.png)
+
+[Colocar texto aqui rsrs]
+
+Analisando os tipos alternativos de destinos finais do lixo, temos as seguintes situações:
+
+- Por regiões:
+
 ![](imagens/61.png)
+
+- Por estados:
+
 ![](imagens/62.png)
 
+[Colocar texto aqui rsrs]
 
 ## ANÁLISE CORRELATIVA
 
