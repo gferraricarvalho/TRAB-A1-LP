@@ -2,7 +2,9 @@
 
 Nessa análise, serão abordados os aspectos descritivos e correlativos entre as instituições escolares dos diferentes locais e tipos e a distribuição dos recursos ecológicos (água, energia, esgoto e tratamento de lixo) nas mesmas.
 
-A base de dados utilizda foi:
+A base de dados utilizada foi:
+
+[dar um jeito de colocar base de dados aqui kkkkkk]
 
 Para mais detalhes sobre o que cada coluna representa, consulte o dicionário de dados.
 
@@ -12,9 +14,76 @@ Essas análises foram retiradas dos prints e dos datasets e imagens salvos do ar
 
 Primeiramente, vamos abordar o ponto de vista descritivo para efetuar a análise de como é distribuido os recursos ecológicos nas escolas do país. As medidas estatísticas utilizadas foram o mínimo, o máximo, a média, a mediana e o desvio padrão.
 
+De modo geral, temos os seguintes dados estatísticos a cerca de cada um dos indicadores
+
+- Por região:
+
+![](datasets/dados_reg.csv)
+
+- Por estado:
+
+![](datasets/dados_est.csv)
+
+Analisando, inicialmente, a quantidade de escolas (por região e por estado) que recebem água potável, temos as seguintes situações:
+
+- Por regiões:
+
+![](imagens/11.png)
+
+- Por estados:
+
+![](imagens/12.png)
+
+Observa-se que há uma enorme quantidade de escolas em São Paulo que recebem água potável em relação ao demais estados (cerca de 30000), elevando assim a quantidade de escolas que recebem água potável na Região Sudeste, conforme ocorre nos gráficos acima. Além disso, Minas Gerais e Rio de Janeiro também contribuem fortemente para essa quantidade. Em seguida, vemos o Nordeste em segunda posição, com água potável em maior quantidade em escolas da Bahia, Maranhão, Pernambuco e Paraíba (todos abaixo de 15000). Por fim, vê-se que as três regiões restantes encontram-se em menor quantidade, mas isto não significa que elas tem menos em proporção, pois devemos levar em conta a extensão terriorial (muito rebaixada no Sul e no Centro-Oeste) e a quantidade de escolas existentes (muito rebaixada no Norte e no Centro-Oeste).
+
+Analisando agora, a quantidade de escolas (por região e por estado) que recebem água, energia e possuem esgoto e tratamento de lixo de caráter dado pela rede pública, temos as seguintes situações:
+
+- Por regiões:
+
+![](imagens/21.png)
+
+- Por estados:
+
+![](imagens/22.png)
+
+Novamente, observamos São Paulo com forte destaque em todos os quesitos, com acompanhamento considerável de Minas Gerais e Rio de Janeiro. A Região Nordeste, ganhando destaque nesses quesitos graças a Bahia, Pernambuco e Maranhão e as demais regiões sem consideráveis posições, valendo a observação mencionada anteriormente. Ademais, convém mencionar a forte expressividade de São Paulo no quesito de escolha do destino final do lixo por meio do poder público.
+
+A fim de analisar a ausência desses recursos para entender se, de fato, as regiões menos expressivas estão de fato em condições precárias no ambiente de ensino, temos as seguintes situações:
+
+- Por regiões:
+
+![](imagens/31.png)
+
+- Por estados:
+
+![](imagens/32.png)
+
+[Escrever análise de dados inexistentes]
+
+Analisando agora meios alternativos de abastecimento de água e energia nas escolas, além de tipos diferentes de esgoto e tratamento de lixo nas escolas, temos as seguintes situações:
+
+- Por regiões:
+
+![](imagens/41.png)
+
+- Por estados:
+
+![](imagens/42.png)
+
+
+![](imagens/51.png)
+![](imagens/52.png)
+![](imagens/61.png)
+![](imagens/62.png)
+
+
 ## ANÁLISE CORRELATIVA
 
 Agora, vamos analisar a correlação entre cada um dos indicadores e o tipo de localização em que as escolas se encontram (urbana e rural) ou localização diferenciada (assentamentos, terras indígenas e remanescentes de quilombos) e o tipo de dependência escolar (federal, estadual, pública e privada), a fim de inferir como ocorre a proporção em cada um destes.
+
+![](imagens/71.png)
+![](imagens/72.png)
+![](imagens/73.png)
 
 ## IDEIAS ADICIONAIS
 
