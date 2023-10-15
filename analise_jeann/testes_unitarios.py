@@ -1,6 +1,5 @@
 import unittest
 import pandas as pd
-import numpy as np
 import funcoes_uteis as fu
 
 class Testes(unittest.TestCase):
