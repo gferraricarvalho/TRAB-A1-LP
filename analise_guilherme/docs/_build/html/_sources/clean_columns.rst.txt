@@ -1,0 +1,7 @@
+clean\_columns module
+=====================
+
+.. automodule:: clean_columns
+   :members:
+   :undoc-members:
+   :show-inheritance:
