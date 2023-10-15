@@ -9,7 +9,7 @@ def analise_completa():
     específicamente para essa análise.
 
     Return
-    ------
+    ------ 
     estatisticas -> dict com todas as estatísticas dos estados 'SP','MG' e 'PA'.
     """
 
