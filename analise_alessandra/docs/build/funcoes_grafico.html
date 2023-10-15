@@ -48,11 +48,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Módulos</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="analise_ale.html">Módulo de Analise Alessandra</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Funções Gráfico</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#funcoes_grafico.grafico_de_linha_6_var"><code class="docutils literal notranslate"><span class="pre">grafico_de_linha_6_var()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funcoes_grafico.grafico_de_barras_6_var"><code class="docutils literal notranslate"><span class="pre">grafico_de_barras_6_var()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="funcoes_selecao.html">Funções Seleção</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ler_arquivo.html">Função para ler arquivo csv</a></li>
 </ul>
 </li>
 </ul>
@@ -82,15 +81,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-funcoes_grafico">
-<span id="funcoes-grafico"></span><h1>Funções Gráfico<a class="headerlink" href="#module-funcoes_grafico" title="Link to this heading"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="funcoes_grafico.grafico_de_linha_6_var">
-<span class="sig-prename descclassname"><span class="pre">funcoes_grafico.</span></span><span class="sig-name descname"><span class="pre">grafico_de_linha_6_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lim_inf_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lim_sup_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nome_figura</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#funcoes_grafico.grafico_de_linha_6_var" title="Link to this definition"></a></dt>
+  <section id="funcoes-grafico">
+<h1>Funções Gráfico<a class="headerlink" href="#funcoes-grafico" title="Link to this heading"></a></h1>
+<p>Função para gerar o gráfico utilizado.</p>
+<dl class="py function" id="module-funcoes_grafico">
+<dt class="sig sig-object py" id="funcoes_grafico.grafico_de_barras_6_var">
+<span class="sig-prename descclassname"><span class="pre">funcoes_grafico.</span></span><span class="sig-name descname"><span class="pre">grafico_de_barras_6_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tamanho_barra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cor6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lim_inf_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lim_sup_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nome_agrupamento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nome_figura</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#funcoes_grafico.grafico_de_barras_6_var" title="Link to this definition"></a></dt>
 <dd><p>Função para gerar e salvar um gráfico de linha com 6 variáveis.</p>
 <section id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
 <dl class="simple">
+<dt>tamanho_barra<span class="classifier">float</span></dt><dd><p>Tamanho de cada barra do gráfico.</p>
+</dd>
 <dt>var1<span class="classifier">Series</span></dt><dd><p>Variável 1 que será plotada.</p>
 </dd>
 <dt>var2<span class="classifier">Series</span></dt><dd><p>Variável 2 que será plotada.</p>
@@ -134,6 +136,8 @@
 <dt>titulo<span class="classifier">string</span></dt><dd><p>Título do gráfico.</p>
 </dd>
 <dt>x_label<span class="classifier">string</span></dt><dd><p>Nome do eixo x.</p>
+</dd>
+<dt>nome_agrupamento<span class="classifier">list</span></dt><dd><p>Lista com os nomes dos agrupamentos dos dados, que serão adicionados aos sticks do eixo x.</p>
 </dd>
 <dt>y_label<span class="classifier">string</span></dt><dd><p>Nome do eixo y.</p>
 </dd>

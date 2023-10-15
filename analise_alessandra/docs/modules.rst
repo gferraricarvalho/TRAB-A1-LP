@@ -2,9 +2,8 @@ Módulos
 =======
  
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    analise_ale
    funcoes_grafico
    funcoes_selecao
-   ler_arquivo
