@@ -1,18 +1,24 @@
-import os
 import funcoes_uteis as fu
 import pandas as pd
 import matplotlib.pyplot as plt
 
 def viz_simples(df: pd.DataFrame, escolha_coluna: str, colunas: list, quant_graf_lin: int, quant_graf_col: int, name: str):
-    """Vizualização Simplificada (por Região ou Estado) da quantidade de cada indicador ecológico utilizado (Água, Energia, Esgoto ou Tratamento
-    de Lixo) em um (ou vários) gráfico(s) de barras verticais.
+    """Vizualização Simplificada (por Região ou Estado) da quantidade do indicador ecológico fornecido em um (ou vários) gráfico(s) de barras verticais.
+
+    Parameters:
+    -----------
+    df: DataFrame
+    colunas: colunas 
+    quant_graf_lin: quantidade de subplots de gráficos por linha
+    quant_graf_col: quantidade de subplots de gráficos por colunas 
+    name: nome da imagem que será salvado (sem o .png)
     """
     
     if escolha_coluna not in ['NO_REGIAO', 'SG_UF']:
         raise ValueError('A escolha_coluna deve ser "NO_REGIAO" (Nome da Região) ou "SG_UF" (Sigla do Estado)')
     
     if quant_graf_lin * quant_graf_col != len(colunas):
-        pass # escrever um raise
+        raise ValueError('A quantidade de linhas (quant_graf_lin) e a quantidade de colunas (quant_graf_col) devem satisfazer uma quantidade total de suplots igual ao número de colunas fornecidas')
 
     df = fu.agrupa_por_sum(df, escolha_coluna, colunas)
 
@@ -60,6 +66,15 @@ def viz_correlativa(df: pd.DataFrame, escolha_coluna: str, colunas_agua: list, c
     """Vizualização da Correlação do Tipo de Localização, Tipo de Localização Diferenciada ou Tipo de Dependência com a
     quantidade de cada indicador ecológico utilizado (Água, Energia, Esgoto ou Tratamento de Lixo) em um (ou vários) gráfico(s)
     de barras verticais empilhadas.
+
+    Parameters:
+    -----------
+    df: DataFrame
+    escolha_coluna: coluna base (TP_LOCALIZACAO, TP_LOCALIZACAO_DIFERENCIADA ou TP_DEPENDENCIA)
+    colunas_agua: colunas de agua
+    colunas_energia: colunas de energia
+    colunas_esgoto: colunas de esgoto
+    colunas_lixo: colunas de lixo
     """
     
     if escolha_coluna not in ['TP_LOCALIZACAO', 'TP_LOCALIZACAO_DIFERENCIADA', 'TP_DEPENDENCIA']:
