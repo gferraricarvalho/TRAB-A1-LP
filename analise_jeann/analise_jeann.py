@@ -22,6 +22,7 @@ columns_lixo = ['IN_LIXO_SERVICO_COLETA', 'IN_LIXO_QUEIMA', 'IN_LIXO_ENTERRA', '
 colunas = columns_agua + columns_energia + columns_esgoto + columns_lixo
 
 df = fu.escolhe_colunas(df, columns_local + colunas)
+fu.salva_dataset(df, 'dados_utilizados')
 
 # Análise Descritiva
 
