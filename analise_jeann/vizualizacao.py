@@ -31,6 +31,8 @@ def viz_simples(df: pd.DataFrame, escolha_coluna: str, colunas: list, quant_graf
         ax.set_title(f"{colunas[0]}", fontsize=15)
         if escolha_coluna == 'SG_UF':
             ax.tick_params(axis='x', labelrotation=90) # detalhes de formatação
+        if escolha_coluna == 'NO_REGIAO':
+            ax.tick_params(axis='x', labelrotation=60)
         ax.tick_params(axis='x', labelsize=10)
         ax.tick_params(axis='y', labelsize=15)
         ax.axhline(media, color='red', linestyle='-', label='Média')
@@ -42,6 +44,8 @@ def viz_simples(df: pd.DataFrame, escolha_coluna: str, colunas: list, quant_graf
             ax[j].set_title(f"{colunas[j]}", fontsize=15)
             if escolha_coluna == 'SG_UF':
                 ax[j].tick_params(axis='x', labelrotation=90) # detalhes de formatação
+            if escolha_coluna == 'NO_REGIAO':
+                ax[j].tick_params(axis='x', labelrotation=60)
             ax[j].tick_params(axis='x', labelsize=10)
             ax[j].tick_params(axis='y', labelsize=12)
             ax[j].axhline(media, color='red', linestyle='-', label='Média')
@@ -54,6 +58,8 @@ def viz_simples(df: pd.DataFrame, escolha_coluna: str, colunas: list, quant_graf
                 ax[i, j].set_title(f"{colunas[cont]}", fontsize=15)
                 if escolha_coluna == 'SG_UF':
                     ax[i, j].tick_params(axis='x', labelrotation=90) # detalhes de formatação
+                if escolha_coluna == 'NO_REGIAO':
+                    ax[i, j].tick_params(axis='x', labelrotation=60)
                 ax[i, j].tick_params(axis='x', labelsize=10)
                 ax[i, j].tick_params(axis='y', labelsize=12)
                 ax[i, j].axhline(media, color='red', linestyle='-', label='Média')
