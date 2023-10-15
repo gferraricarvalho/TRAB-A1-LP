@@ -30,7 +30,7 @@ indigena = (fs.somar_valores_agrupado(df, "QT_MAT_BAS_INDIGENA", "TP_DEPENDENCIA
 grafico = fg.grafico_de_linha_6_var(nao_declarada, branca, preta, parda, amarela, indigena, "Não declarada", "Branca", 
                                     "Preta", "Parda", "Amarela", "Indígena", "#A569BD", "#F4D03F", "#3498DB", "#E74C3C", 
                                     "#58D68D", "#7F8C8D", 0, 10, "Número de matrículas na educação básica, por tipo de escola",
-                                    "Tipo de escola", "Número de matriculas (em milhões)", "grafico_Ale.png")
+                                    "Tipo de escola", "Número de matriculas (em milhões)", "analise_alessandra/grafico_Ale.png")
 
 #print dos dados, para análise
 print ("Matrículas de pessoas da raça Não declarada: ", nao_declarada, "Matrículas de pessoas da raça Branca: ", branca,

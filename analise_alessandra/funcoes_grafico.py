@@ -62,6 +62,7 @@ def grafico_de_linha_6_var (var1, var2, var3, var4, var5, var6, label1, label2, 
 
     """
 
+    figura = plt.figure()
     #O bloco abaixo plota as 6 variáveis em um único gráfico
     plt.plot(var1, label=label1, color=cor1)
     plt.plot(var2, label=label2, color=cor2)
@@ -78,6 +79,6 @@ def grafico_de_linha_6_var (var1, var2, var3, var4, var5, var6, label1, label2, 
     #mostra a figura
     plt.show()
     #salva a figura
-    plt.savefig(nome_figura)
+    figura.savefig(nome_figura)
 
     return
