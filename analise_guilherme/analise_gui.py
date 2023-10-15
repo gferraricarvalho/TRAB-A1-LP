@@ -1,6 +1,5 @@
 import sys
 import os
-import matplotlib.pyplot as plt
 import clean_columns as cc
 import graph_function as gf
 
@@ -27,4 +26,4 @@ novo_rotulo = ['Corrimão', 'Elevador', 'Vão Livre', 'Rampas', 'Sinal Visual', 
 df_acessibilidade = cc.sum_columns(df_filtrado)
 
 #Gera um gráfico em barra, com os valores e tipos de acessibilidade 
-grafico = gf.generate_graph_bar((10,6), df_acessibilidade, (0,100000), "Acessibilidade (221140 Escolas Analisadas)", "N° de Escolas", "Tipo de Acessibilidade", "black", novo_rotulo, "acessibilidade.png")
+grafico = gf.generate_graph_bar((10,6), df_acessibilidade, (0,100000), "Acessibilidade (221140 Escolas Analisadas)", "N° de Escolas", "Tipo de Acessibilidade", "black", novo_rotulo, "analise_guilherme/acessibilidade.png")

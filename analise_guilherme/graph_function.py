@@ -51,5 +51,5 @@ def generate_graph_bar(figuresize, dataframe, x_lim, titulo, x_label, y_label, c
 
     #Plota e salva a figura no formato png
     plt.show()
-    plt.savefig(namefig)
+    fig.savefig(namefig)
     return
