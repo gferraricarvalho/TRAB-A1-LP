@@ -3,6 +3,7 @@ import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import doctest as dt
+import numpy as np
 
 diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 sys.path.append(diretorio_raiz)
@@ -59,7 +60,7 @@ def organiza(parametro_ordem: str,dados: pd.DataFrame, colunas_usadas:str) -> pd
 
 
 def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str, eixo_x: pd.DataFrame,
-                     titulo: str,nome_imag:str):
+                     titulo: str,nome_imag:str,frequencia: list):
     """
     Essa função desempenha um papel importante na geração e armazenamento de gráficos a partir de um DataFrame
     com dados específicos escolhidos pelo usuário. Ela aceita os seguintes parâmetros:
@@ -79,7 +80,7 @@ def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str,
     """
 
     try:
-        quantidade = dados_uf[coluna_desejada]
+        quantidade = dados_uf[coluna_desejada]/np.array(frequencia)
         fig, ax = plt.subplots()
         quantidade.plot(kind='bar', ax=ax)
         ax.set_ylabel(eixo_y)
@@ -159,6 +160,26 @@ def encontrar_max(df: pd.DataFrame, coluna_max: str ,coluna_desejada: str):
     max_valor = df[coluna_max].max()
     municipios_max = df[df[coluna_max] == max_valor][coluna_desejada].tolist()
     return municipios_max
+
+def freq_contagem(df:pd.DataFrame,coluna:str):
+    '''
+    Essa função caucula a a frequência de cada item da coluna fornecida no DataFrame
+
+    Exemplo:
+
+    >>> df = pd.DataFrame({'Fruta': ['maçã', 'Banana', 'maçã', 'laranja', 'Banana', 'maçã']})
+    >>> frequencia(df,'Fruta')
+    Fruta
+    maçã       3
+    Banana     2
+    laranja    1
+    Name: count, dtype: int64
+    '''
+    try:
+        freq = df[coluna].value_counts().sort_index()
+        return freq
+    except KeyError:
+        raise ValueError(f"{coluna} não pertence a {df}")
 
 if __name__ == "__main__":
     dt.testmod(verbose=True)
