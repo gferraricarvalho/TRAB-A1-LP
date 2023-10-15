@@ -18,9 +18,8 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['sphinx.ext.autodoc']  # Adicionando a extensão autodoc
-
 templates_path = ['_templates']
-exclude_patterns = ['main']
+exclude_patterns = ['main.py','ler_arquivo module.py']
 
 language = 'pt-BR'
 

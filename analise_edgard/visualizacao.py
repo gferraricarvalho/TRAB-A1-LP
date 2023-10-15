@@ -5,7 +5,7 @@ import pandas as pd
 import doctest as dt
 import numpy as np
 
-diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 sys.path.append(diretorio_raiz)
 
 import ler_arquivo as la
@@ -48,6 +48,16 @@ def organiza(parametro_ordem: str,dados: pd.DataFrame, colunas_usadas:str) -> pd
     Returns
     -------
     dados_ag-> DataFrame com os dados reorganizados conforme os parâmetros
+
+    Exemplo:
+    >>> dados = pd.DataFrame({'Nome': ['Alice', 'Bob', 'Carol', 'David', 'Eve'], 'Idade': [25, 30, 28, 35, 22]})
+    >>> organiza('Nome',dados,['Nome','Idade'])
+        Nome  Idade
+    0  Alice     25
+    1    Bob     30
+    2  Carol     28
+    3  David     35
+    4    Eve     22
 """
 
      #escolhendo as colunas que serão utilizadas
@@ -59,7 +69,7 @@ def organiza(parametro_ordem: str,dados: pd.DataFrame, colunas_usadas:str) -> pd
     return dados_ag
 
 
-def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str, eixo_x: pd.DataFrame,
+def visualizacao_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str, eixo_x: pd.DataFrame,
                      titulo: str,nome_imag:str,frequencia: list):
     """
     Essa função desempenha um papel importante na geração e armazenamento de gráficos a partir de um DataFrame
@@ -77,6 +87,7 @@ def visualização_RG(dados_uf: pd.DataFrame, coluna_desejada: str, eixo_y: str,
 
     O principal objetivo dessa função é criar um gráfico a partir dos dados fornecidos e salvá-lo em uma pasta 
     chamada "imagem" com o nome especificado pelo usuário.
+
     """
 
     try:
@@ -155,26 +166,26 @@ def encontrar_max(df: pd.DataFrame, coluna_max: str ,coluna_desejada: str):
 
     >>> dados = pd.DataFrame({'Nome': ['Alice', 'Bob', 'Carol', 'David', 'Eve'], 'Idade': [25, 30, 28, 35, 22]})
     >>> encontrar_max(dados, 'Idade', 'Nome')
-    'David'
+    ['David']
     """
     max_valor = df[coluna_max].max()
     municipios_max = df[df[coluna_max] == max_valor][coluna_desejada].tolist()
     return municipios_max
 
 def freq_contagem(df:pd.DataFrame,coluna:str):
-    '''
+    """
     Essa função caucula a a frequência de cada item da coluna fornecida no DataFrame
 
     Exemplo:
 
     >>> df = pd.DataFrame({'Fruta': ['maçã', 'Banana', 'maçã', 'laranja', 'Banana', 'maçã']})
-    >>> frequencia(df,'Fruta')
+    >>> freq_contagem(df,'Fruta')
     Fruta
-    maçã       3
     Banana     2
     laranja    1
+    maçã       3
     Name: count, dtype: int64
-    '''
+    """
     try:
         freq = df[coluna].value_counts().sort_index()
         return freq
