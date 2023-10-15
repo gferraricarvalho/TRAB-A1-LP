@@ -39,7 +39,7 @@ Essa variação pode ser atribuída a diversos fatores, como a disponibilidade d
 
 Essa discrepância na presença de refeitórios nas escolas reflete as diferenças socioeconômicas e geográficas dentro do estado do Maranhão. 
 
-## 5- Dormitórios para professores
+## 5- Quadras esportivas
  
 ![Texto Alternativo](imagens/imagem_5.png)
 
