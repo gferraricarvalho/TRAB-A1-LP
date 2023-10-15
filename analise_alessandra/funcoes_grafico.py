@@ -1,13 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def grafico_de_linha_6_var (tamanho_barra, var1, var2, var3, var4, var5, var6, label1, label2, label3, label4, label5, label6, cor1, cor2, 
-                      cor3, cor4, cor5, cor6, lim_inf_y, lim_sup_y, titulo, x_label,nome_agrupamento, y_label, nome_figura):
+def grafico_de_barras_6_var (tamanho_barra, var1, var2, var3, var4, var5, var6, label1, label2, label3, label4, label5, label6, cor1, cor2, 
+                      cor3, cor4, cor5, cor6, lim_inf_y, lim_sup_y, titulo, x_label, nome_agrupamento, y_label, nome_figura):
     """
     Função para gerar e salvar um gráfico de linha com 6 variáveis.
 
     Parameters
     ----------
+    tamanho_barra : float
+        Tamanho de cada barra do gráfico.
     var1 : Series
         Variável 1 que será plotada.
     var2 : Series
@@ -52,6 +54,8 @@ def grafico_de_linha_6_var (tamanho_barra, var1, var2, var3, var4, var5, var6, l
         Título do gráfico.
     x_label : string
         Nome do eixo x.
+    nome_agrupamento : list
+        Lista com os nomes dos agrupamentos dos dados, que serão adicionados aos sticks do eixo x.
     y_label : string
         Nome do eixo y.
     nome_figura : string
