@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import doctest as dt
 import numpy as np
-
+ 
 diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 sys.path.append(diretorio_raiz)
 
