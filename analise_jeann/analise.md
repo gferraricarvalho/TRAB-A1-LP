@@ -34,7 +34,7 @@ Analisando, inicialmente, a quantidade de escolas (por região e por estado) que
 
 ![](imagens/12.png)
 
-Observa-se que há uma enorme quantidade de escolas em São Paulo que recebem água potável em relação ao demais estados (cerca de 30000), elevando assim a quantidade de escolas que recebem água potável na Região Sudeste, conforme ocorre nos gráficos acima. Além disso, Minas Gerais e Rio de Janeiro também contribuem fortemente para essa quantidade. Em seguida, vemos o Nordeste em segunda posição, com água potável em maior quantidade em escolas da Bahia, Maranhão, Pernambuco e Paraíba (todos abaixo de 15000). Por fim, vê-se que as três regiões restantes encontram-se em menor quantidade, mas isto não significa que elas tem menos em proporção, pois devemos levar em conta a extensão terriorial (muito rebaixada no Sul e no Centro-Oeste) e a quantidade de escolas existentes (muito rebaixada no Norte e no Centro-Oeste).
+Observa-se que há uma enorme quantidade de escolas em São Paulo que recebem água potável em relação ao demais estados (cerca de 30000), elevando assim a quantidade de escolas que recebem água potável na Região Sudeste, conforme ocorre nos gráficos acima. Além disso, Minas Gerais e Rio de Janeiro também contribuem fortemente para essa quantidade. Em seguida, vemos o Nordeste em segunda posição, com água potável em maior quantidade em escolas da Bahia, Maranhão e Pernambuco (todos abaixo de 15000). Por fim, vê-se que as três regiões restantes encontram-se em menor quantidade, mas isto não significa que elas tem menos em proporção, pois devemos levar em conta a extensão terriorial (muito rebaixada no Sul e no Centro-Oeste) e a quantidade de escolas existentes (muito rebaixada no Norte e no Centro-Oeste).
 
 Analisando agora, a quantidade de escolas (por região e por estado) que recebem água, energia e possuem esgoto e tratamento de lixo de caráter dado pela rede pública, temos as seguintes situações:
 
@@ -46,7 +46,7 @@ Analisando agora, a quantidade de escolas (por região e por estado) que recebem
 
 ![](imagens/22.png)
 
-Novamente, observamos São Paulo com forte destaque em todos os quesitos, com acompanhamento considerável de Minas Gerais e Rio de Janeiro. A Região Nordeste, ganhando destaque nesses quesitos graças a Bahia, Pernambuco e Maranhão e as demais regiões sem consideráveis posições, valendo a observação mencionada anteriormente. Ademais, convém mencionar a forte expressividade de São Paulo no quesito de escolha do destino final do lixo por meio do poder público.
+Novamente, observamos São Paulo com forte destaque em todos os quesitos (cerca de 30000, o que indica que provavelmente são os mesmos locais), com acompanhamento considerável de Minas Gerais e Rio de Janeiro. A Região Nordeste, ganhando destaque nesses quesitos graças a Bahia, Pernambuco e Maranhão e as demais regiões sem consideráveis posições, valendo a observação mencionada anteriormente. Ademais, convém mencionar a forte expressividade de São Paulo no quesito de escolha do destino final do lixo por meio do poder público.
 
 A fim de analisar a ausência desses recursos para entender se, de fato, as regiões menos expressivas estão de fato em condições precárias no ambiente de ensino, temos as seguintes situações:
 
@@ -58,7 +58,7 @@ A fim de analisar a ausência desses recursos para entender se, de fato, as regi
 
 ![](imagens/32.png)
 
-Nesse caso, a Região Sudeste perde a expressividade, exceto no tratamento de lixo, onde vemos que a quantidade de escolas que não tem tratamento do lixo é relativamente alta (principalmente em São Paulo, mas também em Minas Gerais e Rio de Janeiro). A Região Nordeste tem também diversas escolas sem abastecimento de água, sem esgoto e sem tratamento de lixo, muito frequentes na Bahia, Maranhão e Paraíba. A Região Norte também demonstra ter muitas escolas sem água, energia e esgoto (principalmente no Amazonas e no Acre), que deve ocorrer por diversos fatores, que podem ser geograficos, economicos ou mesmo historico-sociais. Por fim, as regiões Centro-Oeste e Sul se mantém em valores baixos, o que indica uma baixa quantidade de escolas sem algum destes indicadores, caracterizando um grau de desenvolvimento, já que em proporção há bem mais escolas com esses indicadore do que sem.
+Nesse caso, a Região Sudeste perde a expressividade, exceto no tratamento de lixo, onde vemos que a quantidade de escolas que não tem tratamento do lixo é relativamente alta (principalmente em São Paulo, mas também em Minas Gerais e Rio de Janeiro). A Região Nordeste tem também diversas escolas sem abastecimento de água, sem esgoto e sem tratamento de lixo, muito frequentes na Bahia e Maranhão. A Região Norte também demonstra ter muitas escolas sem água, energia e esgoto (principalmente no Amazonas, no Pará e no Acre), que deve ocorrer por diversos fatores, que podem ser geograficos, economicos ou mesmo historico-sociais. Por fim, as regiões Centro-Oeste e Sul se mantém em valores baixos, o que indica uma baixa quantidade de escolas sem algum destes indicadores, caracterizando um grau de desenvolvimento, já que em proporção há bem mais escolas com esses indicadore do que sem.
 
 Analisando agora meios alternativos de abastecimento de água e energia nas escolas, além de tipos diferentes de esgoto e tratamento de lixo nas escolas, temos as seguintes situações:
 
@@ -70,7 +70,7 @@ Analisando agora meios alternativos de abastecimento de água e energia nas esco
 
 ![](imagens/42.png)
 
-[Colocar texto aqui rsrs]
+Nesse caso, observa-se que tanto o Nordeste e o Norte ganham destaque (com o Sudeste acima da média no caso da energia renovável). Temos um domínio sobre abastecimento com poço artesiano e energia renovável em ambos, água de cacimba e esgoto dos três tipos de fossa apresentados no caso do Nordeste e água proveniente do rio (Rio Amazonas) e energia vinda de gerador fóssil no Norte.
 
 Analisando os tipos de tratamento de lixo que ocorrem nas escolas, temos as seguintes situações:
 
@@ -82,7 +82,7 @@ Analisando os tipos de tratamento de lixo que ocorrem nas escolas, temos as segu
 
 ![](imagens/52.png)
 
-[Colocar texto aqui rsrs]
+Quanto ao tratamento do lixo, temos uma distribuição razoavelmente equilibrada entre as regiões Nordeste (novamente, Bahia, Maranhão, Pernambuco e Paraíba), Sudeste (domínio de Minas Gerais na coleta, São Paulo na separação e reciclagem e Rio de Janeiro na reutilização) e Sul (principalmente Santa Catarina e Rio Grande do Sul). Novamente, temos uma baixa expressividade do Norte e do Centro-Oeste.
 
 Analisando os tipos alternativos de destinos finais do lixo, temos as seguintes situações:
 
@@ -94,7 +94,9 @@ Analisando os tipos alternativos de destinos finais do lixo, temos as seguintes 
 
 ![](imagens/62.png)
 
-[Colocar texto aqui rsrs]
+Temos baixa expressividade do Sudeste, Centro-Oeste e Sul, forte presença do Nordeste (com Bahia e Maranhão), bem como do Norte, na queima do lixo e do Norte (com Amazonas e Pará) no enterramento e no descarte em outros áreas.
+
+Em resumo, nota-se que a região Centro-Oeste não tem resultados acima da média nos quesitos acima, o que não indica necessariamente algo ruim, já que também está abaixo da média em quantidade de escolas que não possuem água, energia, esgoto ou tratamento de lixo. Vemos o Sul de forma neutra, com dados aparentemente bons, o Norte com pros em contras (sendo o foco: Amazonas, Pará e Acre), Nordeste com muita expressividade (sendo o foco: Bahia, Maranhão e Pernambuco) e o Sudeste com todos diversos bons indicadores, indicando um alto desenvolvimento em relação ao país (sendo o foco: São Paulo).
 
 ## ANÁLISE CORRELATIVA
 
