@@ -26,7 +26,24 @@ def filter_columns(dataframe, colunas):
     0      13
     1      22
     """
-    df_filtrado = dataframe[colunas]
+    try: 
+        if not isinstance(colunas, list):
+            raise ValueError("O argumento 'colunas' deve ser uma lista de nomes de colunas.")
+        
+        elif not all(col in dataframe.columns for col in colunas):
+            raise KeyError("Uma ou mais colunas não existem no dataframe.")
+        
+        df_filtrado = dataframe[colunas]
+    except ValueError as e:
+        print(f"Erro: {str(e)}")
+        df_filtrado = None
+    except KeyError as e:
+        print(f"Erro: {str(e)}")
+        df_filtrado = None
+    except TypeError as e:
+        print(f"Erro: O argumento 'dataframe' deve ser um DataFrame do pandas. Detalhes: {str(e)}")
+        df_filtrado = None
+
     return df_filtrado
 
 def sum_columns(dataframe):
@@ -51,8 +68,18 @@ def sum_columns(dataframe):
     Faltas         8
     dtype: object
     """
-    df_somado = dataframe.sum()
-    return df_somado
+    try:
+        if not isinstance(dataframe, pd.DataFrame):
+            raise TypeError("O argumento 'dataframe' deve ser um DataFrame do pandas.")
+        
+        df_somado = dataframe.sum()
+        return df_somado
+    except ValueError as ve:
+        print(f"Erro de Valor: {str(ve)}")
+        return None
+    except TypeError as te:
+        print(f"Erro de Tipo: {str(te)}")
+        return None
 
 if __name__ == "__main__":
     dt.testmod()
