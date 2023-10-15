@@ -2,69 +2,83 @@
 
 ## 1- Bibliotecas por região 
 
-![Texto Alternativo](imagens/imagem_1.png)
+![Texto Alternativo](imagens/imagem_1.png)  
 
-A partir deste gráfico, podemos observar que o estado de Minas Gerais se destaca quando se trata da presença de bibliotecas em suas escolas. O estado abrange um total de 853 municípios, com uma média de aproximadamente 11,35 bibliotecas por município e um desvio padrão de 40,3. Notavelmente, Belo Horizonte se destaca como o município com o maior número de escolas que possuem bibliotecas, alcançando a impressionante marca de 1.027 escolas.
+A análise dos dados revela que o estado do Acre apresenta a menor proporção de escolas com bibliotecas em comparação com os demais estados brasileiros. Em média, o Acre tem cerca de 4,18 bibliotecas por município, com um desvio padrão significativo de 11,05. Essa situação pode ser atribuída, em grande parte, à escassez de recursos disponíveis no estado em comparação com outras regiões do Brasil.
 
-## 2-Dormitórios para alunos
+A falta de recursos financeiros pode ser um fator determinante na dificuldade de estabelecer e manter bibliotecas nas escolas do Acre.
 
-![Texto Alternativo](imagens/imagem_3.png)
+Nesse cenário, é interessante observar que a capital do estado, Rio Branco, lidera em termos de quantidade de escolas com bibliotecas, contabilizando 53 unidades. Essa concentração em uma área urbana pode indicar que os recursos destinados à educação, incluindo bibliotecas, são direcionados principalmente para a capital, enquanto áreas rurais e mais remotas podem ter acesso limitado a esses recursos.
 
-Com este outro gráfico, observamos que Minas Gerais também se destaca na quantidade de dormitórios disponíveis para os alunos, com uma média de 0,64 dormitórios por município e um desvio padrão de 2,65. Isso sugere que a presença de dormitórios fornecidos pelas escolas não é comum. Novamente, Belo Horizonte chama a atenção ao liderar com a maior quantidade de dormitórios, totalizando 69 enqunto muitos outros municípios não possuem esse tipo de instalação.
-
-## 3- Banheiros adptados
+## 2-Banheiros adptados
 
 ![Texto Alternativo](imagens/imagem_2.png)
 
-Com base nestes dados, fica evidente que o estado de São Paulo lidera em termos de quantidade de banheiros adaptados em escolas em todo o Brasil. Essa liderança faz sentido, considerando a grande população do estado. Dos 645 municípios que participaram dessas estatísticas, São Paulo tem uma média de aproximadamente 24,5 escolas com banheiros adaptados por município. No entanto, é importante notar que o desvio padrão é relativamente alto, medindo 133,7, o que sugere uma concentração dessas escolas em alguns poucos municípios.
+Com base no gráfico, podemos ver que o Amazonas tem uma proporção baixa de escolas com banheiros adaptados. A média é de apenas 14.99 escolas por município, com um desvio padrão considerável de 32.11. Essa situação pode ser atribuída à vasta extensão geográfica do estado, que inclui áreas rurais e remotas de difícil acesso.
 
-Nesse contexto, chama a atenção a capital do estado, São Paulo, que se destaca com um impressionante total de 3.264 escolas com banheiros adaptados.
+Essas áreas distantes e a diversidade geográfica podem tornar a construção e manutenção de banheiros adaptados uma tarefa desafiadora e cara. No entanto, a capital, Manaus, se destaca com a maior quantidade de escolas com banheiros adaptados, totalizando 430. Isso pode indicar uma disparidade entre áreas urbanas e rurais em termos de acessibilidade a essas instalações.
+
+## 3- Dormitórios para alunos  
+
+![Texto Alternativo](imagens/imagem_3.png)
+
+Este gráfico evidencia que São Paulo apresenta uma proporção relativamente baixa de escolas com dormitórios para alunos em relação ao total de escolas existentes no estado. A média é de apenas 0.45 escolas com dormitórios por município, com um desvio padrão de 2.4. Isso indica que a presença de dormitórios nas escolas varia consideravelmente de município para município em São Paulo.
+
+Essa situação sugere que, em um estado altamente desenvolvido como São Paulo, a maioria das escolas pode não considerar dormitórios para alunos uma necessidade, uma vez que os alunos geralmente não precisam pernoitar nas escolas. Isso reflete a infraestrutura e o acesso à educação de qualidade em todo o estado.
+
+No entanto, é importante destacar que a capital do estado, São Paulo, se destaca com 62 escolas que oferecem dormitórios para alunos. Isso pode ser atribuído à grande população da capital e à presença de escolas de diferentes tipos e finalidades, incluindo aquelas que oferecem acomodações para estudantes de outras localidades.
 
 
-## 4- Quadras esportivas
+## 4- Refeitórios escolares
 
-![Texto Alternativo](imagens/imagem_5.png)
-
-Nestes dados, podemos observar que o estado de São Paulo se destaca como o líder em número de quadras esportivas em escolas em todo o Brasil. Esse destaque é coerente com a grande população do estado. Dos 645 municípios que contribuíram com esses dados, São Paulo possui, em média, cerca de 24,5 quadras esportivas por município. Entretanto, é relevante notar que o desvio padrão é considerável, chegando a 134,4, indicando uma variação significativa na distribuição dessas quadras, com uma concentração maior em alguns poucos municípios.
-
-Destacando-se mais uma vez, a cidade de São Paulo surge como líder no número de quadras esportivas, com um total impressionante de 3.309 unidades.
-
-## 5- Dormitórios para professores
- 
 ![Texto Alternativo](imagens/imagem_4.png)
 
-Nestes dados, é evidente que o estado do Pará se destaca em relação à quantidade de dormitórios para professores em escolas. O Pará registra uma média de cerca de 2,42 dormitórios por município, com um desvio padrão de 6,26. No entanto, vale ressaltar que a presença de dormitórios para professores não é comum em muitos municípios.
+Com base nesse gráfico, podemos observar que o estado do Maranhão possui a menor proporção de escolas com refeitórios em relação ao número total de escolas. A média de escolas com refeitórios por município é de apenas 6.23, com um desvio padrão consideravelmente alto, chegando a 23.49. Isso indica que a presença de refeitórios em escolas varia significativamente de um município para outro no estado do Maranhão.
 
-Dentre esses municípios, merece destaque o município de Portel, que lidera com a maior quantidade de dormitórios para professores, registrando um máximo de 55 dormitórios. Portanto, enquanto o Pará se sobressai na média de dormitórios, a presença dessas instalações varia consideravelmente entre os municípios, com Portel se destacando como líder nesse quesito.
+Essa variação pode ser atribuída a diversos fatores, como a disponibilidade de recursos financeiros, infraestrutura, políticas educacionais locais e até mesmo o tamanho e a população de cada município. Apesar da média relativamente baixa, é importante destacar que São Luís, a capital do estado, se destaca com um total de 326 escolas que possuem refeitórios.
+
+Essa discrepância na presença de refeitórios nas escolas reflete as diferenças socioeconômicas e geográficas dentro do estado do Maranhão. 
+
+## 5- Quadras esportivas
+ 
+![Texto Alternativo](imagens/imagem_5.png)
+
+O gráfico evidencia mais uma vez a situação no estado do Maranhão, que apresenta a menor proporção de escolas com quadras esportivas em relação ao número total de escolas. A média de escolas com quadras esportivas por município no estado é de apenas 5.98, com um significativo desvio padrão de 19.8. Isso demonstra uma considerável variação na presença de quadras esportivas em escolas, mesmo com uma média relativamente baixa.
+
+Essa disparidade na disponibilidade de quadras esportivas pode ser atribuída a diversos fatores, incluindo desigualdades regionais, recursos financeiros, políticas educacionais locais e características demográficas. Como mencionado anteriormente, São Luís, a capital do Maranhão, destaca-se mais uma vez, com um total de 274 escolas que possuem quadras esportivas.
+
+## Conclusão
+
+Com base na análise dos dados apresentados, podemos concluir que os investimentos em instalações escolares variam consideravelmente de acordo com os estados e municípios do Brasil. Essas variações podem ser atribuídas a uma série de fatores, incluindo recursos financeiros disponíveis, políticas educacionais locais, densidade populacional e demanda por serviços educacionais.
 
 ## DataFrame com todos os dados usados 
 
-| SG_UF   |   IN_BANHEIRO_PNE |   IN_BIBLIOTECA |   IN_DORMITORIO_ALUNO |   IN_DORMITORIO_PROFESSOR |   IN_QUADRA_ESPORTES |
-|:--------|------------------:|----------------:|----------------------:|--------------------------:|---------------------:|
-| AC      |               428 |              92 |                    20 |                        99 |                  179 |
-| AL      |              1320 |             883 |                   109 |                        26 |                  671 |
-| AM      |              1064 |            1339 |                    70 |                       238 |                  860 |
-| AP      |               336 |             258 |                    11 |                       170 |                  200 |
-| BA      |              5996 |            4652 |                   458 |                       327 |                 4207 |
-| CE      |              3621 |            3174 |                   189 |                        54 |                 2947 |
-| DF      |              1195 |             474 |                    95 |                        18 |                  817 |
-| ES      |              1825 |            1271 |                    66 |                        23 |                 1282 |
-| GO      |              3188 |            2726 |                   207 |                        72 |                 2216 |
-| MA      |              3267 |            1935 |                   201 |                        70 |                 1304 |
-| MG      |              8303 |            9688 |                   548 |                       152 |                 7499 |
-| MS      |              1399 |             773 |                    80 |                        35 |                 1112 |
-| MT      |              1870 |            1438 |                    99 |                        45 |                 1364 |
-| PA      |              3293 |            2092 |                   111 |                       348 |                 2238 |
-| PB      |              2318 |            1507 |                   170 |                        31 |                 1055 |
-| PE      |              3622 |            3566 |                   147 |                        43 |                 2154 |
-| PI      |              1791 |            1154 |                    77 |                        72 |                 1173 |
-| PR      |              6774 |            5312 |                   224 |                        37 |                 5407 |
-| RJ      |              6515 |            5253 |                   357 |                       103 |                 5660 |
-| RN      |              1894 |            1535 |                   114 |                        31 |                  826 |
-| RO      |               840 |             593 |                    33 |                        49 |                  570 |
-| RR      |               265 |             238 |                    16 |                         5 |                  195 |
-| RS      |              5363 |            5978 |                   368 |                        68 |                 4301 |
-| SC      |              3951 |            3138 |                   197 |                        20 |                 2900 |
-| SE      |              1304 |             520 |                    45 |                         8 |                  559 |
-| SP      |             15775 |            5718 |                   295 |                        35 |                14747 |
-| TO      |               880 |             675 |                    53 |                        24 |                  611 |
+|    | SG_UF   |   IN_BANHEIRO_PNE |   IN_BIBLIOTECA |   IN_DORMITORIO_ALUNO |   IN_REFEITORIO |   IN_QUADRA_ESPORTES |
+|---:|:--------|------------------:|----------------:|----------------------:|----------------:|---------------------:|
+|  0 | AC      |               427 |              92 |                    20 |             582 |                  179 |
+|  1 | AL      |              1310 |             877 |                   109 |             741 |                  664 |
+|  2 | AM      |              1041 |            1293 |                    69 |            1798 |                  823 |
+|  3 | AP      |               335 |             252 |                    11 |             523 |                  199 |
+|  4 | BA      |              5839 |            4462 |                   440 |            3210 |                 4009 |
+|  5 | CE      |              3607 |            3151 |                   189 |            1883 |                 2942 |
+|  6 | DF      |              1193 |             473 |                    95 |             573 |                  816 |
+|  7 | ES      |              1823 |            1270 |                    66 |            2374 |                 1280 |
+|  8 | GO      |              3168 |            2705 |                   206 |            1474 |                 2201 |
+|  9 | MA      |              3254 |            1918 |                   200 |            1353 |                 1298 |
+| 10 | MG      |              8286 |            9658 |                   547 |           11601 |                 7479 |
+| 11 | MS      |              1383 |             760 |                    80 |             951 |                 1083 |
+| 12 | MT      |              1861 |            1421 |                    98 |            1811 |                 1353 |
+| 13 | PA      |              3280 |            2079 |                   111 |            3385 |                 2226 |
+| 14 | PB      |              2306 |            1498 |                   170 |            1223 |                 1050 |
+| 15 | PE      |              3602 |            3546 |                   147 |            1700 |                 2143 |
+| 16 | PI      |              1784 |            1149 |                    77 |             864 |                 1164 |
+| 17 | PR      |              6743 |            5276 |                   223 |            6614 |                 5381 |
+| 18 | RJ      |              6466 |            5203 |                   356 |            8491 |                 5614 |
+| 19 | RN      |              1885 |            1526 |                   113 |            1137 |                  820 |
+| 20 | RO      |               835 |             588 |                    33 |             720 |                  565 |
+| 21 | RR      |               258 |             227 |                    16 |             347 |                  185 |
+| 22 | RS      |              5336 |            5943 |                   368 |            7527 |                 4276 |
+| 23 | SC      |              3939 |            3128 |                   197 |            4696 |                 2894 |
+| 24 | SE      |              1304 |             520 |                    45 |             523 |                  559 |
+| 25 | SP      |             15695 |            5645 |                   293 |           20841 |                14655 |
+| 26 | TO      |               877 |             671 |                    53 |             379 |                  607 |

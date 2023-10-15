@@ -6,7 +6,7 @@ Essa função é chamada pela main.py e após isso chama todas as funções disp
 automatizando o processo da analise de dados, essa função não recebe nenhum parâmetro por conta que é feita 
 específicamente para essa análise.
 
-Return
+Return 
 ------  
 estatisticas -> dict com todas as estatísticas dos estados 'SP','MG' e 'PA'.
 """
@@ -84,12 +84,11 @@ estatisticas['AC'] = {
 }
 
 print(estatisticas['MA'])
-print(40*"#")
+print(100*"#")
 print(estatisticas['AM'])
-print(40*"#")
+print(100*"#")
 print(estatisticas['AC'])
-print(40*"#")
-
+print(100*"#") 
 
 
 
