@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def grafico_de_linha_6_var (var1, var2, var3, var4, var5, var6, label1, label2, label3, label4, label5, label6, cor1, cor2, 
-                      cor3, cor4, cor5, cor6, lim_inf_y, lim_sup_y, titulo, x_label, y_label, nome_figura):
+def grafico_de_linha_6_var (tamanho_barra, var1, var2, var3, var4, var5, var6, label1, label2, label3, label4, label5, label6, cor1, cor2, 
+                      cor3, cor4, cor5, cor6, lim_inf_y, lim_sup_y, titulo, x_label,nome_agrupamento, y_label, nome_figura):
     """
     Função para gerar e salvar um gráfico de linha com 6 variáveis.
 
@@ -63,17 +63,18 @@ def grafico_de_linha_6_var (var1, var2, var3, var4, var5, var6, label1, label2, 
 
     """
 
+    #Gera a figura
     figura = plt.figure()
-    #O bloco abaixo plota as 6 variáveis em um único gráfico
-    barWidht=0.13
-
+    #ajusta o tamanho das barras
+    barWidht=tamanho_barra
+    #Ajusta a posição das barras de cada variável
     p1 = np.arange(len(var1))
     p2 = [x + barWidht for x in p1]
     p3 = [x + barWidht for x in p2]
     p4 = [x + barWidht for x in p3]
     p5 = [x + barWidht for x in p4]
     p6 = [x + barWidht for x in p5]
-
+    #plota o gráfico das 6 variáveis
     plt.bar(p1, var1, label=label1, color=cor1, width=barWidht)
     plt.bar(p2, var2, label=label2, color=cor2, width=barWidht)
     plt.bar(p3, var3, label=label3, color=cor3, width=barWidht)
@@ -83,7 +84,8 @@ def grafico_de_linha_6_var (var1, var2, var3, var4, var5, var6, label1, label2, 
     plt.ylim(bottom=lim_inf_y, top=lim_sup_y)
     plt.title(titulo)
     plt.xlabel(x_label)
-    plt.xticks([p + barWidht for p in range(len(var1))], ["Estadual", "Federal", "Municipal", "Privada"])
+    #Nomeia o eixo x com o tipo de escola
+    plt.xticks([p + barWidht for p in range(len(var1))], nome_agrupamento)
     plt.ylabel(y_label)
     #adiciona legenda ao gráfico, pois são várias variáveis
     plt.legend()
