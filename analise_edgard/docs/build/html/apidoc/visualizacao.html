@@ -85,10 +85,26 @@ posição do valor encontrado na coluna_max</p>
 <h2>exemplo:<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Nome&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Carol&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">],</span> <span class="s1">&#39;Idade&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">22</span><span class="p">]})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">encontrar_max</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="s1">&#39;Idade&#39;</span><span class="p">,</span> <span class="s1">&#39;Nome&#39;</span><span class="p">)</span>
-<span class="go">&#39;David&#39;</span>
+<span class="go">[&#39;David&#39;]</span>
 </pre></div>
 </div>
 </section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="visualizacao.freq_contagem">
+<span class="sig-prename descclassname"><span class="pre">visualizacao.</span></span><span class="sig-name descname"><span class="pre">freq_contagem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#visualizacao.freq_contagem" title="Link to this definition">¶</a></dt>
+<dd><p>Essa função caucula a a frequência de cada item da coluna fornecida no DataFrame</p>
+<p>Exemplo:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Fruta&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;laranja&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã&#39;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">freq_contagem</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;Fruta&#39;</span><span class="p">)</span>
+<span class="go">Fruta</span>
+<span class="go">Banana     2</span>
+<span class="go">laranja    1</span>
+<span class="go">maçã       3</span>
+<span class="go">Name: count, dtype: int64</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -116,12 +132,23 @@ retornando um novo DataFrame contendo apenas as colunas relevantes.</p>
 <section id="id3">
 <h2>Returns<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>dados_ag-&gt; DataFrame com os dados reorganizados conforme os parâmetros</p>
+<p>Exemplo:
+&gt;&gt;&gt; dados = pd.DataFrame({‘Nome’: [‘Alice’, ‘Bob’, ‘Carol’, ‘David’, ‘Eve’], ‘Idade’: [25, 30, 28, 35, 22]})
+&gt;&gt;&gt; organiza(‘Nome’,dados,[‘Nome’,’Idade’])</p>
+<blockquote>
+<div><p>Nome  Idade</p>
+</div></blockquote>
+<p>0  Alice     25
+1    Bob     30
+2  Carol     28
+3  David     35
+4    Eve     22</p>
 </section>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="visualizacao.visualizacao_RG">
-<span class="sig-prename descclassname"><span class="pre">visualizacao.</span></span><span class="sig-name descname"><span class="pre">visualização_RG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dados_uf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna_desejada</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eixo_y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eixo_x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nome_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#visualizacao.visualizacao_RG" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">visualizacao.</span></span><span class="sig-name descname"><span class="pre">visualizacao_RG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dados_uf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna_desejada</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eixo_y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eixo_x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nome_imag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequencia</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#visualizacao.visualizacao_RG" title="Link to this definition">¶</a></dt>
 <dd><p>Essa função desempenha um papel importante na geração e armazenamento de gráficos a partir de um DataFrame
 com dados específicos escolhidos pelo usuário. Ela aceita os seguintes parâmetros:</p>
 <p>1 - dados_uf: Um DataFrame contendo os dados escolhidos pelo usuário.</p>
