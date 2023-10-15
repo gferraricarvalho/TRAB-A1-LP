@@ -10,9 +10,9 @@ sys.path.insert(0, os.path.abspath('../'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'documentacao Alessandra'
-copyright = '2023, Alessandra Bello'
-author = 'Alessandra Bello'
+project = 'Documentação A1 Alessandra'
+copyright = '2023, Alessandra Belló'
+author = 'Alessandra Belló'
 release = '0.1'
 
 # -- General configuration ---------------------------------------------------

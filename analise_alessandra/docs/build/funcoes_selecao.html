@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funções Seleção &mdash; documentação Documentação A1 Alessandra 0.1</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=88519e4e"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=000972dd"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Função para ler arquivo csv" href="ler_arquivo.html" />
+    <link rel="prev" title="Funções Gráfico" href="funcoes_grafico.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Documentação A1 Alessandra
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" aria-label="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Módulos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analise_ale.html">Módulo de Analise Alessandra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="funcoes_grafico.html">Funções Gráfico</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Funções Seleção</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funcoes_selecao.selecionar_colunas"><code class="docutils literal notranslate"><span class="pre">selecionar_colunas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funcoes_selecao.somar_valores_agrupado"><code class="docutils literal notranslate"><span class="pre">somar_valores_agrupado()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funcoes_selecao.trocar_valor"><code class="docutils literal notranslate"><span class="pre">trocar_valor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ler_arquivo.html">Função para ler arquivo csv</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentação A1 Alessandra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Módulos</a></li>
+      <li class="breadcrumb-item active">Funções Seleção</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/funcoes_selecao.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-funcoes_selecao">
+<span id="funcoes-selecao"></span><h1>Funções Seleção<a class="headerlink" href="#module-funcoes_selecao" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="funcoes_selecao.selecionar_colunas">
+<span class="sig-prename descclassname"><span class="pre">funcoes_selecao.</span></span><span class="sig-name descname"><span class="pre">selecionar_colunas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">nomes_colunas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#funcoes_selecao.selecionar_colunas" title="Link to this definition"></a></dt>
+<dd><p>A função selecionar colunas é utilizada para selecionar colunas específicas de um Dataframe.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>dataframe<span class="classifier">DataFrame</span></dt><dd><p>Dataframe onde estão as colunas que serão excluidas.</p>
+</dd>
+<dt><a href="#id1"><span class="problematic" id="id2">*</span></a>nomes_colunas<span class="classifier">string</span></dt><dd><p>Nome das colunas que serão excluidas do DataFrame.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>df<span class="classifier">DataFrame</span></dt><dd><p>DataFrame sem as colunas indicadas.</p>
+</dd>
+</dl>
+</section>
+<section id="exemplo">
+<h2>Exemplo<a class="headerlink" href="#exemplo" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;nome&quot;</span><span class="p">:[</span><span class="s2">&quot;Alessandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Guilherme&quot;</span><span class="p">],</span> <span class="s2">&quot;Idade&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">selecionar_colunas</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;nome&quot;</span><span class="p">)</span>
+<span class="go">         nome</span>
+<span class="go">0  Alessandra</span>
+<span class="go">1   Guilherme</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="funcoes_selecao.somar_valores_agrupado">
+<span class="sig-prename descclassname"><span class="pre">funcoes_selecao.</span></span><span class="sig-name descname"><span class="pre">somar_valores_agrupado</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna_agrupamento</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#funcoes_selecao.somar_valores_agrupado" title="Link to this definition"></a></dt>
+<dd><p>Soma os valores de uma coluna em um dataframe</p>
+<section id="id3">
+<h2>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>dataframe<span class="classifier">Dataframe</span></dt><dd><p>Dataframe onde está a coluna onde os valores serão somados.</p>
+</dd>
+<dt>coluna<span class="classifier">string</span></dt><dd><p>Nome da coluna que será somada.</p>
+</dd>
+<dt>coluna_agrupamento<span class="classifier">string</span></dt><dd><p>Nome da coluna pela qual a soma será agrupada.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>df<span class="classifier">Series</span></dt><dd><p>Serie com a soma da coluna, onde o índice é o agrupamento.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h2>Exemplo<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Idade&quot;</span><span class="p">:[</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">],</span> <span class="s2">&quot;Itens comprados&quot;</span><span class="p">:[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">somar_valores_agrupado</span> <span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;Itens comprados&quot;</span><span class="p">,</span> <span class="s2">&quot;Idade&quot;</span><span class="p">)</span>
+<span class="go">Idade</span>
+<span class="go">20    10</span>
+<span class="go">21     7</span>
+<span class="go">Name: Itens comprados, dtype: int64</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="funcoes_selecao.trocar_valor">
+<span class="sig-prename descclassname"><span class="pre">funcoes_selecao.</span></span><span class="sig-name descname"><span class="pre">trocar_valor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#funcoes_selecao.trocar_valor" title="Link to this definition"></a></dt>
+<dd><p>Função para alterar valores de uma coluna em um DataFrame.</p>
+<section id="id6">
+<h2>Parameters<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>dataframe<span class="classifier">Dataframe</span></dt><dd><p>Dataframe onde estão as colunas que serão alteradas.</p>
+</dd>
+<dt>coluna<span class="classifier">string</span></dt><dd><p>Nome da coluna que será alterada.</p>
+</dd>
+<dt>valores<span class="classifier">Dicionário</span></dt><dd><p>Dicionário onde a chave é o valor atual da célula e o valor é o novo valor que será inserido.</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h2>Returns<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>dataframe<span class="classifier">Dataframe</span></dt><dd><p>Dataframe com os valores alterados.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h2>Exemplo<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;nome&quot;</span><span class="p">:[</span><span class="s2">&quot;Alessandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Guilherme&quot;</span><span class="p">],</span> <span class="s2">&quot;Idade&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trocar_valor</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;Idade&quot;</span><span class="p">,</span> <span class="p">{</span><span class="mi">20</span><span class="p">:</span><span class="s2">&quot;Vinte&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">:</span> <span class="s2">&quot;Vinte e um&quot;</span><span class="p">})</span>
+<span class="go">         nome       Idade</span>
+<span class="go">0  Alessandra       Vinte</span>
+<span class="go">1   Guilherme  Vinte e um</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="funcoes_grafico.html" class="btn btn-neutral float-left" title="Funções Gráfico" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="ler_arquivo.html" class="btn btn-neutral float-right" title="Função para ler arquivo csv" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Direitos autorais 2023, Alessandra Belló.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
