@@ -1,6 +1,5 @@
 import pandas as pd
 import visualizacao as vz
-from limpeza import funcoes as fl
 
 def analise_completa():
     """
