@@ -15,4 +15,4 @@ for col in df.columns:
         df = fl.excluir_outliers(df, col)
 
 # salvando a base limpa
-df.to_csv('dados_limpos.csv')
+df.to_csv('dados_limpos.csv', sep=";")
