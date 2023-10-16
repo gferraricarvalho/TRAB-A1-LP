@@ -1,5 +1,7 @@
-analise\_gui module
-===================
+Módulo de Análise
+=================
+
+Apenas executa as funções dos outros módulos.
 
 .. automodule:: analise_gui
    :members:
