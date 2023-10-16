@@ -25,7 +25,7 @@ Primeiramente, vamos abordar o ponto de vista descritivo para efetuar a análise
 
 De modo geral, temos os seguintes dados estatísticos a cerca de cada um dos indicadores
 
-- Por região:
+- Por regiões:
 
 |               |   IN_AGUA_POTAVEL |   IN_AGUA_REDE_PUBLICA |   IN_AGUA_POCO_ARTESIANO |   IN_AGUA_CACIMBA |   IN_AGUA_FONTE_RIO |   IN_AGUA_INEXISTENTE |   IN_ENERGIA_REDE_PUBLICA |   IN_ENERGIA_GERADOR_FOSSIL |   IN_ENERGIA_RENOVAVEL |   IN_ENERGIA_INEXISTENTE |   IN_ESGOTO_REDE_PUBLICA |   IN_ESGOTO_FOSSA_SEPTICA |   IN_ESGOTO_FOSSA_COMUM |   IN_ESGOTO_FOSSA |   IN_ESGOTO_INEXISTENTE |   IN_LIXO_SERVICO_COLETA |   IN_LIXO_QUEIMA |   IN_LIXO_ENTERRA |   IN_LIXO_DESTINO_FINAL_PUBLICO |   IN_LIXO_DESCARTA_OUTRA_AREA |   IN_TRATAMENTO_LIXO_SEPARACAO |   IN_TRATAMENTO_LIXO_REUTILIZA |   IN_TRATAMENTO_LIXO_RECICLAGEM |   IN_TRATAMENTO_LIXO_INEXISTENTE |
 |:--------------|------------------:|-----------------------:|-------------------------:|------------------:|--------------------:|----------------------:|--------------------------:|----------------------------:|-----------------------:|-------------------------:|-------------------------:|--------------------------:|------------------------:|------------------:|------------------------:|-------------------------:|-----------------:|------------------:|--------------------------------:|------------------------------:|-------------------------------:|-------------------------------:|--------------------------------:|---------------------------------:|
@@ -35,7 +35,7 @@ De modo geral, temos os seguintes dados estatísticos a cerca de cada um dos ind
 | MEDIANA       |           25008   |                23283   |                  4089    |            1865   |             1077    |               122     |                   25777   |                      74     |                453     |                     22   |                  16630   |                   6698    |                 3468    |           10166   |                  290    |                  25118   |          2415    |           744     |                           540   |                        301    |                       19522    |                        3504    |                         7089    |                          20266   |
 | DESVIO PADRAO |           23001.8 |                20706.6 |                  3863.21 |            4386.6 |             1618.87 |               924.148 |                   23809.3 |                     749.376 |                156.009 |                   1239.4 |                  20049.4 |                   6296.59 |                 6188.02 |           12386.9 |                 1886.32 |                  15311   |          7418.23 |           687.117 |                          9469.2 |                       1400.84 |                        8934.62 |                        3208.73 |                         4719.35 |                          21359.5 |
 
-- Por estado:
+- Por estados:
 
 |               |   IN_AGUA_POTAVEL |   IN_AGUA_REDE_PUBLICA |   IN_AGUA_POCO_ARTESIANO |   IN_AGUA_CACIMBA |   IN_AGUA_FONTE_RIO |   IN_AGUA_INEXISTENTE |   IN_ENERGIA_REDE_PUBLICA |   IN_ENERGIA_GERADOR_FOSSIL |   IN_ENERGIA_RENOVAVEL |   IN_ENERGIA_INEXISTENTE |   IN_ESGOTO_REDE_PUBLICA |   IN_ESGOTO_FOSSA_SEPTICA |   IN_ESGOTO_FOSSA_COMUM |   IN_ESGOTO_FOSSA |   IN_ESGOTO_INEXISTENTE |   IN_LIXO_SERVICO_COLETA |   IN_LIXO_QUEIMA |   IN_LIXO_ENTERRA |   IN_LIXO_DESTINO_FINAL_PUBLICO |   IN_LIXO_DESCARTA_OUTRA_AREA |   IN_TRATAMENTO_LIXO_SEPARACAO |   IN_TRATAMENTO_LIXO_REUTILIZA |   IN_TRATAMENTO_LIXO_RECICLAGEM |   IN_TRATAMENTO_LIXO_INEXISTENTE |
 |:--------------|------------------:|-----------------------:|-------------------------:|------------------:|--------------------:|----------------------:|--------------------------:|----------------------------:|-----------------------:|-------------------------:|-------------------------:|--------------------------:|------------------------:|------------------:|------------------------:|-------------------------:|-----------------:|------------------:|--------------------------------:|------------------------------:|-------------------------------:|-------------------------------:|--------------------------------:|---------------------------------:|
@@ -123,9 +123,27 @@ Em resumo, nota-se que a região Centro-Oeste não tem resultados acima da médi
 
 Agora, vamos analisar a correlação entre cada um dos indicadores e o tipo de localização em que as escolas se encontram (urbana e rural) ou localização diferenciada (assentamentos, terras indígenas e remanescentes de quilombos) e o tipo de dependência escolar (federal, estadual, pública e privada), a fim de inferir como ocorre a proporção em cada um destes.
 
+Inicialmente, para o Tipo de Localização e o Tipo de Dependência Escolar, temos as seguintes situações:
+
+- Por Tipo de Localização:
+
 ![](imagens/71.png)
+
+Nota-se que a proporção de escolas de área urbana que possuem abastecimento por água potável é alta (cerca de 100%), ocorrendo também para a água e energia de rede pública e para o serviço de coleta de lixo, além de uma leve diminuição, porém continuando acentuado no esgoto de rede pública, os demais dados sobre água, energia, esgoto e lixo encontram-se em quantidade inferiores a 50% nessa área, com exceção de escolas sem tratamento de lixo, como se observa pela largura da coluna (1) verde claro. Quanto às áreas rurais, temos acentuado abastecimento por energia de rede pública e água potável e cerca de 75% de uso de esgoto de fossa e de não tratamento de lixo. Os demais indicadores tem valores abaixo dos 40%.
+
+- Por Tipo de Localização Diferenciada
+
 ![](imagens/72.png)
+
+Observa-se a acentuada expressividade do uso de água potável, energia de rede pública, esgoto de fossa e não tratamento de lixo em todos os tipos de locais, com os diferenciados (Assentamentos, Terras Indígenas e Remanescentes de Quilombos) efetuando a queima de lixo, várias Terras Indígenas sem esgoto e energia. Além disso, não o abastecimento por água de rede pública só ocorre em locais não diferenciados. Estes dados condizem com os fatos de que esses locais diferenciados encontram-se em ambiente rural e sem muito acesso (em relação às cidades) a meios tecnológicos muito avançados.
+
+- Por Tipo de Dependência Escolar
+
 ![](imagens/73.png)
+
+Todas os tipos de dependência escolar tem muitas escolas com abastecimento de água potável e de rede pública, energia e esgoto de rede pública e serviços de coleta de lixo. Os demais indicadores são variaveis e não muito expressivos, com exceção do esgoto de fossa em escolas não diferenciais, assentamentos e terras indígenas e o não tratamento de lixo.
+
+Em resumo, observa-se que muitas das escolas não efetuam um tratamento do lixo, caracterizando uma possível intercenção governamental nesse quesito. Além disso, as escolas localizadas nas cidades (áreas urbanas) possuem água potável e os demais indicadores fortemente influenciados pela rede pública, o que é algo comum. Escolas de locais rurais ou diferenciados tendem a não possuir abastecimento energético ou esgotos. E, com relação ao tipo de escolas, temos uma distrivuição forte de água, energia, esgoto e coleta de lixo, o que já configura uma situação inicial razoável.
 
 ## IDEIAS ADICIONAIS
 
