@@ -14,7 +14,7 @@ sphinx:
 python:
   version: 3.7
 build:
-    os: windows
+    os: linux
 
 # Modulos Guilherme
 sphinx:
