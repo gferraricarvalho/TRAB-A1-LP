@@ -6,7 +6,7 @@ sphinx:
 python:
   version: 3.7
 build:
-    os: windows
+    os: ubuntu-22.04
 
 # Modulos Edgard
 sphinx:
@@ -14,7 +14,7 @@ sphinx:
 python:
   version: 3.7
 build:
-    os: linux
+    os: ubuntu-22.04
 
 # Modulos Guilherme
 sphinx:
@@ -22,7 +22,7 @@ sphinx:
 python:
   version: 3.7
 build:
-    os: windows
+    os: ubuntu-22.04
 
 # Modulos Jeann
 sphinx:
@@ -30,4 +30,4 @@ sphinx:
 python:
   version: 3.7
 build:
-    os: windows
+    os: ubuntu-22.04
