@@ -1,49 +1,49 @@
 version: 2
 
 # Modulo Alessandra
-- sphinx:
+sphinx:
     configuration: analise_alessandra/docs/conf.py
-  python:
+python:
     version: 3.7
-  build:
+build:
     os: ubuntu-22.04
-    tools:
-      - make
-    commands:
-      - make html
+tools:
+    - make
+commands:
+    - make html
 
 # Modulo Edgard
-- sphinx:
+sphinx:
     configuration: analise_edgard/docs/conf.py
-  python:
+python:
     version: 3.7
-  build:
+build:
     os: ubuntu-22.04
-    tools:
-      - make
-    commands:
-      - make html
+tools:
+    - make
+commands:
+    - make html
 
 # Modulo Guilherme
-- sphinx:
+sphinx:
     configuration: analise_guilherme/docs/conf.py
-  python:
+python:
     version: 3.7
-  build:
+build:
     os: ubuntu-22.04
-    tools:
-      - make
-    commands:
-      - make html
+tools:
+    - make
+commands:
+    - make html
 
 # Modulo Jeann
-- sphinx:
+sphinx:
     configuration: analise_jeann/docs/conf.py
-  python:
+python:
     version: 3.7
-  build:
+build:
     os: ubuntu-22.04
-    tools:
-      - make
-    commands:
-      - make html
+tools:
+    - make
+commands:
+    - make html
