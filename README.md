@@ -1,6 +1,6 @@
 # Trabalho A1 de LP
 
-Data de entrega 15/10/2023
+Data de entrega 16/10/2023
 
 ## Integrantes: 
 - Alessandra Belló
@@ -27,7 +27,7 @@ Execute o arquivo main.py para limpar a base de dados, e gerar o arquivo 'dados_
 
 ## Analises:
 
-- Alessandra: 
+- Alessandra: Analisa a quantidade de matrículas por raça em relção ao tipo de escola.
 
 - Edgard: Relaciona a quantidade de investimentos na infraestrutura das escolas com o seu estado.
 
