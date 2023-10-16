@@ -9,7 +9,7 @@ O tipo de escola, segundo dados obtidos através do site de onde foi extraida a 
 
 A seguir, podemos observar o gráfico gerado após a análise.
 
-![](analise_alessandra/grafico_Ale.png)
+![](grafico_Ale.png)
 
 Como podemos observar, nas escolas municipais e estaduais a raça predominante entre os inscritos é a parda, seguida por pessoas brancas e 
 após as não declaradas. Ao analisarmos as escolas privadas, podemos ver que esse padrão não se repete. Nas escolas privadas a maioria das 
