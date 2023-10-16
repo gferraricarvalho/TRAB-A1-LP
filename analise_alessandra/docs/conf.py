@@ -22,7 +22,7 @@ release = '0.1'
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.githubpages', 'sphinx_rtd_theme']
 
-templates_path = ['_templates']
+templates_path = ['templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 language = 'pt_BR'
@@ -32,4 +32,4 @@ language = 'pt_BR'
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_static_path = ['_static']
+html_static_path = ['static']
