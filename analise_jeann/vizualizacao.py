@@ -12,10 +12,14 @@ def viz_simples(df: pd.DataFrame, escolha_coluna: str, colunas: list, quant_graf
     quant_graf_lin: quantidade de subplots de gráficos por linha
     quant_graf_col: quantidade de subplots de gráficos por colunas 
     name: nome da imagem que será salvado (sem o .png)
+    
     """
     
     if escolha_coluna not in ['NO_REGIAO', 'SG_UF']:
         raise ValueError('A escolha_coluna deve ser "NO_REGIAO" (Nome da Região) ou "SG_UF" (Sigla do Estado)')
+    
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
     
     if quant_graf_lin * quant_graf_col != len(colunas):
         raise ValueError('A quantidade de linhas (quant_graf_lin) e a quantidade de colunas (quant_graf_col) devem satisfazer uma quantidade total de suplots igual ao número de colunas fornecidas')
