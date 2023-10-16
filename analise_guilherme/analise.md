@@ -7,7 +7,8 @@ O objetivo principal desta análise é avaliar a situação da acessibilidade na
 Os dados foram carregados em um DataFrame utilizando a biblioteca Pandas, facilitando a manipulação e análise. Em seguida, as colunas relacionadas à acessibilidade foram filtradas, criando um novo DataFrame que continha apenas essas informações.
 
 Realizou-se uma análise descritiva das colunas de acessibilidade. Um gráfico de barras foi criado para ilustrar a situação da acessibilidade nas escolas. No eixo y, as diferentes categorias ou métricas de acessibilidade foram representadas, e no eixo x, foram representados os valores correspondentes. Ademais, é possível observar que existe uma ordenação para as colunas de acessibilidade: Primeiro "inexistente" representando a quantidade de escolas sem nenhum tipo de adaptação ou acessibilidade, segundo grupo formado por "Sinal tátil, pisos táteis e sinal sonoro" representando acessibilidade para deficientes visuais, terceiro grupo "Sinal Visual" que mostra a quantidade de escolas com adaptações para deficiente auditivo, e por último as colunas restantes representando acessibilidade para deficientes com mobilidade reduzida.
-![](analise_guilherme/acessibilidade.png)
+
+![](acessibilidade.png)
 
 Com base na análise e na visualização, foram identificados os seguintes insights:
 - Em 28,7% das escolas ainda não existe **nenhum tipo** de adaptação para pessoas com deficiência.
