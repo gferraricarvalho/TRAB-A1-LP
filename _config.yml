@@ -1,3 +1,1 @@
-# SITE CONFIGURATION
-baseurl: ""
-url: "https://gferraricarvalho.github.io/TRAB-A1-LP/"
+remote_theme: "pages-themes/minimal"
