@@ -25,6 +25,9 @@ class Testes(unittest.TestCase):
                         "Dado5": [1000, 0, 0, -102]})
         value = fu.escolhe_colunas(self.df, ["Alunos", "Curso", "Dado1", "Dado2", "Dado3", "Dado4", "Dado5"])
         self.assertTrue(result.equals(value))
+
+        with self.assertRaises(ValueError):
+            fu.escolhe_colunas(self.df, ["Alunos", "Curso", "Dado8"])
     
     def test_agrupa_por_sum(self):
         # teste para a função agrupa_por_sum
@@ -35,6 +38,10 @@ class Testes(unittest.TestCase):
         value = fu.agrupa_por_sum(self.df, "Curso", ["Dado1", "Dado2", "Dado3", "Dado4", "Dado5"])
         self.assertTrue(result.equals(value))
 
+        with self.assertRaises(ValueError):
+            fu.agrupa_por_sum(self.df, "Notas", ["Dado1", "Dado2", "Dado3"])
+            fu.agrupa_por_sum(self.df, "Curso", ["Alunos", "Curso", "Dado8"])
+
     def test_agrupa_por_cont(self):
         # teste para a função agrupa_por_cont
         result = pd.DataFrame({"Dado1": [1, 3], "Dado2": [1, 3], "Dado3": [1, 3], "Dado4": [1, 3], "Dado5": [1, 3]},
@@ -43,6 +50,10 @@ class Testes(unittest.TestCase):
         
         value = fu.agrupa_por_cont(self.df, "Curso", ["Dado1", "Dado2", "Dado3", "Dado4", "Dado5"])
         self.assertTrue(result.equals(value))
+
+        with self.assertRaises(ValueError):
+            fu.agrupa_por_cont(self.df, "Notas", ["Dado1", "Dado2", "Dado3"])
+            fu.agrupa_por_cont(self.df, "Curso", ["Alunos", "Curso", "Dado8"])
 
     def test_agrupa_por_proporcao(self):
         # teste para a função agrupa_por_proporcao
@@ -53,6 +64,10 @@ class Testes(unittest.TestCase):
         value = fu.agrupa_por_proporcao(self.df, "Curso", ["Dado1", "Dado2", "Dado3", "Dado4", "Dado5"])
         self.assertTrue(result.equals(value))
 
+        with self.assertRaises(ValueError):
+            fu.agrupa_por_proporcao(self.df, "Notas", ["Dado1", "Dado2", "Dado3"])
+            fu.agrupa_por_proporcao(self.df, "Curso", ["Alunos", "Curso", "Dado8"])
+
     def test_dados_descritivos(self):
         # teste para a função dados_descritivos
         result = pd.DataFrame({"Dado1": [-5., 24., 9.5, 9.5, 20.506096654409877] , "Dado2": [12., 81., 46.5, 46.5, 48.79036790187178],
@@ -62,6 +77,10 @@ class Testes(unittest.TestCase):
         
         value = fu.dados_descritivos(self.df, "Curso", ["Dado1", "Dado2", "Dado3", "Dado4", "Dado5"])
         self.assertTrue(result.equals(value))
+
+        with self.assertRaises(ValueError):
+            fu.dados_descritivos(self.df, "Notas", ["Dado1", "Dado2", "Dado3"])
+            fu.dados_descritivos(self.df, "Curso", ["Alunos", "Curso", "Dado8"])
 
 
 if __name__ == '__main__':
