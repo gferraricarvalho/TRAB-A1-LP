@@ -5,21 +5,29 @@ sphinx:
   configuration: analise_alessandra/docs/conf.py
 python:
   version: 3.7
+build:
+    os: windows
 
 # Modulos Edgard
 sphinx:
   configuration: analise_edgard/docs/conf.py
 python:
   version: 3.7
+build:
+    os: windows
 
 # Modulos Guilherme
 sphinx:
   configuration: analise_guilherme/docs/conf.py
 python:
   version: 3.7
+build:
+    os: windows
 
 # Modulos Jeann
 sphinx:
   configuration: analise_jeann/docs/conf.py
 python:
   version: 3.7
+build:
+    os: windows
