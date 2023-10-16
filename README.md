@@ -3,13 +3,13 @@
 Data de entrega 15/10/2023
 
 ## Integrantes: 
-Alessandra Belló
+- Alessandra Belló
 
-Edgard Junio
+- Edgard Junio
 
-Guilherme Ferrari
+- Guilherme Ferrari
 
-Jeann da Rocha
+- Jeann da Rocha
 
 ## Como executar
 
@@ -27,7 +27,13 @@ Execute o arquivo main.py para limpar a base de dados, e gerar o arquivo 'dados_
 
 ## Analises:
 
-Relaciona a quantidade de investimentos na infraestrutura das escolas com o seu Estado - Edgard
+- Alessandra: 
+
+- Edgard: Relaciona a quantidade de investimentos na infraestrutura das escolas com o seu estado.
+
+- Guilherme: 
+
+- Jeann: Análise dos recursos ecológicos presentes nas escolas brasileiras.
 
 ## Links sphinx:
 
