@@ -10,7 +10,7 @@ A falta de recursos financeiros pode ser um fator determinante na dificuldade de
 
 Nesse cenário, é interessante observar que a capital do estado, Rio Branco, lidera em termos de quantidade de escolas com bibliotecas, contabilizando 53 unidades. Essa concentração em uma área urbana pode indicar que os recursos destinados à educação, incluindo bibliotecas, são direcionados principalmente para a capital, enquanto áreas rurais e mais remotas podem ter acesso limitado a esses recursos.
 
-## 2-Banheiros adptados
+## 2-Banheiros adaptados
 
 ![Texto Alternativo](imagens/imagem_2.png)
 
