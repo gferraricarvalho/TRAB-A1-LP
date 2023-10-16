@@ -110,6 +110,7 @@ def salva_dataset(df: pd.DataFrame, name: str):
     if not os.path.exists('analise_jeann/datasets'):
         os.makedirs('analise_jeann/datasets')
     df.to_csv(f"analise_jeann/datasets/{name}.csv", sep=';')
+    df.to_markdown(f"analise_jeann/datasets/{name}.md")
 
 
 def salva_imagens(fig, name: str):
