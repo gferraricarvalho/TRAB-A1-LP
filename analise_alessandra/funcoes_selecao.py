@@ -28,9 +28,10 @@ def selecionar_colunas(dataframe, *nomes_colunas):
     """
     try:
         df = dataframe[[*nomes_colunas]]
-    except:
-        print("Verifique se o nome do DataFrame ou da coluna está escrito da forma correta.") 
-    return df
+        return df
+    except KeyError as e:
+        print(f"Erro. Uma ou mais colunas não existem no DataFrame: {e}")
+        return None
 
 def trocar_valor (dataframe, coluna, valores):
     """
@@ -62,8 +63,10 @@ def trocar_valor (dataframe, coluna, valores):
     #mapeia os valores indicados no dicionario e faz a troca atribuindo os novos valores no mesmo DataFrame
     try:
         dataframe[coluna] = dataframe[coluna].map(valores)
-    except: 
-        print("Verifique se os nomes estão corretos e o dicionário está abrangendo todas as possibilidades.")
+    except KeyError as e:
+        print(f"Erro. Uma ou mais chaves do dicionário não foram encontradas na coluna '{coluna}': {e}")
+    except Exception as e:
+        print(f"Erro. Um erro inesperado ocorreu - {e}")
     return dataframe
 
 def somar_valores_agrupado (dataframe, coluna, coluna_agrupamento):
@@ -97,9 +100,13 @@ def somar_valores_agrupado (dataframe, coluna, coluna_agrupamento):
     #primeiro faz o agrupamento, para depois selecionara a coluna e fazer a soma
     try:
         df = dataframe.groupby(coluna_agrupamento)[coluna].sum()
-    except:
-        print("Verifique se os nomes estão corretos.")
-    return df
+        return df
+    except KeyError as e:
+        print(f"Erro. Uma ou mais colunas não existem no DataFrame: {e}")
+        return None
+    except Exception as e:
+        print(f"Erro inesperado: {e}")
+        return None
 
 if __name__ == "__main__":
     dt.testmod()
