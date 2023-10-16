@@ -34,6 +34,10 @@ def escolhe_colunas(df: pd.DataFrame, colunas: list) -> pd.DataFrame:
     2  3  6
 
     """
+
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
+
     return df[colunas]
 
 
@@ -54,8 +58,13 @@ def agrupa_por_sum(df: pd.DataFrame, escolha_coluna: str, colunas: list) -> pd.D
     A       
     1  9  15
     2  6   9
-
     """
+
+    if escolha_coluna not in df.columns:
+        raise ValueError("A coluna base escolhida não se encontra como uma das colunas do dataframe.")
+
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
 
     return df[[escolha_coluna] + colunas].groupby(escolha_coluna).agg(lambda x: sum(x))
 
@@ -79,6 +88,12 @@ def agrupa_por_cont(df: pd.DataFrame, escolha_coluna: str, colunas: list) -> pd.
     2  1  1
     """
 
+    if escolha_coluna not in df.columns:
+        raise ValueError("A coluna base escolhida não se encontra como uma das colunas do dataframe.")
+
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
+
     return df[[escolha_coluna] + colunas].groupby(escolha_coluna).agg(lambda x: len(x))
 
 
@@ -101,6 +116,12 @@ def agrupa_por_proporcao(df: pd.DataFrame, escolha_coluna: str, colunas: list) -
     2  6.0  9.0
 
     """
+
+    if escolha_coluna not in df.columns:
+        raise ValueError("A coluna base escolhida não se encontra como uma das colunas do dataframe.")
+
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
 
     return agrupa_por_sum(df, escolha_coluna, colunas) / agrupa_por_cont(df, escolha_coluna, colunas)
 
@@ -140,6 +161,12 @@ def dados_descritivos(df: pd.DataFrame, escolha_coluna: str, colunas: list) -> p
     DESVIO PADRAO  2.12132   4.242641
     """
 
+    if escolha_coluna not in df.columns:
+        raise ValueError("A coluna base escolhida não se encontra como uma das colunas do dataframe.")
+
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
+
     min = agrupa_por_sum(df, escolha_coluna, colunas).min() # mínimo dos valores
     max = agrupa_por_sum(df, escolha_coluna, colunas).max() # máximo dos valores
     mean = agrupa_por_sum(df, escolha_coluna, colunas).mean() # media dos valores
@@ -163,6 +190,9 @@ def acima_media(df: pd. DataFrame, escolha_coluna: str, colunas: list):
 
     if escolha_coluna not in ['NO_REGIAO', 'SG_UF']:
         raise ValueError('A escolha_coluna deve ser "NO_REGIAO" (Nome da Região) ou "SG_UF" (Sigla do Estado)')
+
+    if len([col for col in colunas if col in df.columns]) != len(colunas):
+        raise ValueError("Alguma(s) das colunas fornecidas não estão no dataframe")
     
     dados = agrupa_por_sum(df, escolha_coluna, colunas)
     d = dados_descritivos(df, escolha_coluna, colunas) 
