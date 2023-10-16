@@ -31,7 +31,7 @@ Execute o arquivo main.py para limpar a base de dados, e gerar o arquivo 'dados_
 
 - Edgard: Relaciona a quantidade de investimentos na infraestrutura das escolas com o seu estado.
 
-- Guilherme: 
+- Guilherme: Estudo sobre acessibilidade para pessoas portadoras de deficiência nas escolas.
 
 - Jeann: Análise dos recursos ecológicos presentes nas escolas brasileiras.
 
