@@ -2,9 +2,8 @@ import visualizacao as vz
 
 
 """
-Essa função é chamada pela main.py e após isso chama todas as funções disponíveis no arquivo visualizacao.py
-automatizando o processo da analise de dados, essa função não recebe nenhum parâmetro por conta que é feita 
-específicamente para essa análise.
+Após executar esse arquivo ele chama todas as funções disponíveis no arquivo visualizacao.py
+automatizando o processo da analise de dados específicamente para essa análise.
 
 Return 
 ------  
