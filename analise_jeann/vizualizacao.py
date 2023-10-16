@@ -97,23 +97,27 @@ def viz_correlativa(df: pd.DataFrame, escolha_coluna: str, colunas_agua: list, c
     fig.subplots_adjust(hspace=0.5)
     
     df_corr_agua = fu.agrupa_por_proporcao(df, escolha_coluna, colunas_agua) # proporcao da quantidade de escolas no quesito agua
+    df_corr_agua.index = idx
     df_corr_agua.plot(kind='bar', stacked=True, figsize=(12, 10), ax=ax[0,0])
     ax[0, 0].tick_params(axis='x', labelrotation=0)
-    ax[0, 0].legend(loc='upper left', fontsize='small')
+    ax[0, 0].legend(loc='upper left', fontsize='xx-small')
     
     df_corr_energia = fu.agrupa_por_proporcao(df, escolha_coluna, colunas_energia) # proporcao da quantidade de escolas no quesito energia
+    df_corr_energia.index = idx
     df_corr_energia.plot(kind='bar', stacked=True, figsize=(12, 10), ax=ax[0,1])
     ax[0, 1].tick_params(axis='x', labelrotation=0)
-    ax[0, 1].legend(loc='upper left', fontsize='small')
+    ax[0, 1].legend(loc='upper left', fontsize='xx-small')
     
     df_corr_esgoto = fu.agrupa_por_proporcao(df, escolha_coluna, colunas_esgoto) # proporcao da quantidade de escolas no quesito esgoto
+    df_corr_esgoto.index = idx
     df_corr_esgoto.plot(kind='bar', stacked=True, figsize=(12, 10), ax=ax[1,0])
     ax[1, 0].tick_params(axis='x', labelrotation=0)
-    ax[1, 0].legend(loc='upper left', fontsize='small')
+    ax[1, 0].legend(loc='upper left', fontsize='xx-small')
     
     df_corr_lixo = fu.agrupa_por_proporcao(df, escolha_coluna, colunas_lixo) # proporcao da quantidade de escolas no quesito lixo
+    df_corr_lixo.index = idx
     df_corr_lixo.plot(kind='bar', stacked=True, figsize=(12, 10), ax=ax[1,1])
     ax[1, 1].tick_params(axis='x', labelrotation=0)
-    ax[1, 1].legend(loc='upper left', fontsize='small')
+    ax[1, 1].legend(loc='upper left', fontsize='xx-small')
 
     fu.salva_imagens(fig, name)
